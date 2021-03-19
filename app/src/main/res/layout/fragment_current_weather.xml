@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_bright">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.currentweather.CurrentWeatherFragment">
+
+        <TextView
+            android:id="@+id/textCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textCurrentTemper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_80"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVertical60"
+            app:layout_constraintStart_toStartOf="@id/viewLine"
+            app:layout_constraintTop_toBottomOf="@id/textCurrentTime" />
+
+        <TextView
+            android:id="@+id/textCelsius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_celsius"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_54"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textCurrentTemper"
+            app:layout_constraintTop_toBottomOf="@id/textCurrentTime" />
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_2"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="@id/guidelineVertical75"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVertical25"
+            app:layout_constraintTop_toBottomOf="@id/textCurrentTemper" />
+
+        <include
+            android:id="@+id/layoutTemperature"
+            layout="@layout/layout_temperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewLine" />
+
+        <include
+            android:id="@+id/layoutDetail"
+            layout="@layout/layout_weather_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutTemperature" />
+
+        <include
+            android:id="@+id/layoutAirQuality"
+            layout="@layout/layout_air_quality"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewLineHorizontal" />
+
+        <View
+            android:id="@+id/viewLineHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="@id/guidelineVertical75"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVertical25"
+            app:layout_constraintTop_toBottomOf="@id/layoutDetail" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

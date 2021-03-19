@@ -10,11 +10,9 @@ class MainActivity : BaseActivity() {
     override val layoutResource get() = R.layout.activity_main
 
     override fun initViews() {
-
     }
 
     override fun initData() {
-
     }
 
     companion object {

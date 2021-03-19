@@ -19,5 +19,10 @@
     <string name="text_test">26</string>
     <string name="text_test_date">19/03</string>
     <string name="text_test_time">12:34</string>
-
+    <string name="title_favorite">Favorite</string>
+    <string name="title_air_quality">Air Quality</string>
+    <string name="title_celsius">°C</string>
+    <string name="title_detail">Detail</string>
+    <string name="title_see_more">See More</string>
+    <string name="title_wind_gust">Wind Gust</string>
 </resources>

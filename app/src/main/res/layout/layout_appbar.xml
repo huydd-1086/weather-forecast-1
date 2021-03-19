@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/constrainLayout"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@android:color/transparent">
+    android:background="@color/transparent_malachite">
 
     <TextView
         android:id="@+id/textLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_location"
+        android:drawableEnd="@drawable/ic_expand"
         android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/buttonSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_5"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/textLocation"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_expand" />
 
     <ImageButton
         android:id="@+id/buttonSetting"

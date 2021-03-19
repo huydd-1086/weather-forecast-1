@@ -8,7 +8,7 @@ class Splash : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-            startActivity(MainActivity.getIntent(this))
-            finish()
+        startActivity(MainActivity.getIntent(this))
+        finish()
     }
 }

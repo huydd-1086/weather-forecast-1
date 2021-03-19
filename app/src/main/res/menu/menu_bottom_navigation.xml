@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menuCurrentWeather"
-        android:icon="@drawable/ic_today"
+        android:icon="@drawable/ic_tab_today"
         android:title="@string/title_today" />
     <item
         android:id="@+id/menuHourly"
-        android:icon="@drawable/ic_hourly"
+        android:icon="@drawable/ic_tab_hourly"
         android:title="@string/title_hourly" />
     <item
         android:id="@+id/menuDaily"
-        android:icon="@drawable/ic_daily"
+        android:icon="@drawable/ic_tab_daily"
         android:title="@string/title_daily" />
     <item
         android:id="@+id/menuNews"
-        android:icon="@drawable/ic_newspaper"
+        android:icon="@drawable/ic_tab_newspaper"
         android:title="@string/title_news" />
 </menu>

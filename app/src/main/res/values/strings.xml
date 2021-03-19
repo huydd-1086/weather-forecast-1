@@ -1,13 +1,23 @@
 <resources>
-    <string name="app_name">WeatherDemo</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-    <string name="app_full_name">Weather Forecast</string>
+    <string name="app_name">Weather Forecast</string>
     <string name="title_today">Today</string>
     <string name="title_hourly">Hourly</string>
     <string name="title_daily">Daily</string>
     <string name="title_news">News</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="title_location">Location</string>
+    <string name="title_real_feel">Real Feel</string>
+    <string name="title_wind">Wind</string>
+    <string name="title_wind_degree">Degree</string>
+    <string name="title_humidity">Humidity</string>
+    <string name="title_pressure">Pressure</string>
+    <string name="title_cloud">Cloud</string>
+    <string name="title_visibility">Visibility</string>
+    <string name="title_history">History</string>
+    <string name="title_description">Cloudy</string>
+    <string name="title_weather_detail">Weather Detail</string>
+    <string name="text_degree">°C</string>
+    <string name="text_test">26</string>
+    <string name="text_test_date">19/03</string>
+    <string name="text_test_time">12:34</string>
+
 </resources>

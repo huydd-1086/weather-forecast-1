@@ -5,6 +5,7 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 
 abstract class BaseActivity : AppCompatActivity() {
+
     @get: LayoutRes
     protected abstract val layoutResource: Int
 
@@ -12,9 +13,10 @@ abstract class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(layoutResource)
         initViews()
-        initActions()
+        initData()
     }
 
     protected abstract fun initViews()
-    protected abstract fun initActions()
+
+    protected abstract fun initData()
 }

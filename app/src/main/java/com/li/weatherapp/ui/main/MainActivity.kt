@@ -6,13 +6,14 @@ import com.li.weatherapp.R
 import com.li.weatherapp.base.BaseActivity
 
 class MainActivity : BaseActivity() {
+
     override val layoutResource get() = R.layout.activity_main
 
     override fun initViews() {
 
     }
 
-    override fun initActions() {
+    override fun initData() {
 
     }
 

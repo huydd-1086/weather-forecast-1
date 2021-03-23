@@ -81,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_8"
-        android:background="@drawable/shape_button"
+        android:background="@drawable/bg_button_see_more"
         android:paddingHorizontal="@dimen/dp_32"
         android:text="@string/title_see_more"
         android:textAllCaps="false"

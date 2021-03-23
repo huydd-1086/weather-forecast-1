@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_bright">
+    android:background="@drawable/bg_bright">
 
     <View
         android:id="@+id/viewTitleWeatherDetail"
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/iconDescription"
+                android:id="@+id/imageDescription"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="@dimen/dp_16"
@@ -262,7 +262,7 @@
                 app:layout_constraintTop_toTopOf="@id/textVisibilityTitle" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guildLine"
+                android:id="@+id/guildLineVertical50"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -290,7 +290,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/sp_24"
                 app:layout_constraintBottom_toBottomOf="@id/imageSunrise"
-                app:layout_constraintEnd_toStartOf="@id/guildLine"
+                app:layout_constraintEnd_toStartOf="@id/guildLineVertical50"
                 app:layout_constraintTop_toTopOf="@id/imageSunrise" />
 
             <ImageView
@@ -302,7 +302,7 @@
                 android:src="@drawable/ic_sunset"
                 app:layout_constraintBottom_toBottomOf="@id/textSunset"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintStart_toEndOf="@id/guildLine"
+                app:layout_constraintStart_toEndOf="@id/guildLineVertical50"
                 app:layout_constraintTop_toBottomOf="@id/textVisibilityTitle"
                 app:layout_constraintWidth_percent="0.1"
                 app:tint="@android:color/white"

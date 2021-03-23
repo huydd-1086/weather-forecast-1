@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_bright">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_bright">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -49,7 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/dp_2"
             android:background="@android:color/white"
-            app:layout_constraintEnd_toEndOf="@id/guidelineVertical75"
+            app:layout_constraintEnd_toEndOf="@id/guidelineVertical65"
             app:layout_constraintStart_toStartOf="@+id/guidelineVertical25"
             app:layout_constraintTop_toBottomOf="@id/textCurrentTemper" />
 
@@ -86,7 +86,7 @@
             android:layout_height="@dimen/dp_2"
             android:layout_marginTop="@dimen/dp_10"
             android:background="@android:color/white"
-            app:layout_constraintEnd_toEndOf="@id/guidelineVertical75"
+            app:layout_constraintEnd_toEndOf="@id/guidelineVertical65"
             app:layout_constraintStart_toStartOf="@+id/guidelineVertical25"
             app:layout_constraintTop_toBottomOf="@id/layoutDetail" />
 
@@ -98,7 +98,7 @@
             app:layout_constraintGuide_percent="0.25" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineVertical75"
+            android:id="@+id/guidelineVertical65"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"

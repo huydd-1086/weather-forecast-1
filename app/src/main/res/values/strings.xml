@@ -7,7 +7,7 @@
     <string name="title_location">Location</string>
     <string name="title_real_feel">Real Feel</string>
     <string name="title_wind">Wind</string>
-    <string name="title_wind_degree">Degree</string>
+    <string name="title_wind_degree">Wind Degree</string>
     <string name="title_humidity">Humidity</string>
     <string name="title_pressure">Pressure</string>
     <string name="title_cloud">Cloud</string>
@@ -15,14 +15,23 @@
     <string name="title_history">History</string>
     <string name="title_description">Cloudy</string>
     <string name="title_weather_detail">Weather Detail</string>
-    <string name="text_degree">°C</string>
-    <string name="text_test">26</string>
-    <string name="text_test_date">19/03</string>
-    <string name="text_test_time">12:34</string>
     <string name="title_favorite">Favorite</string>
     <string name="title_air_quality">Air Quality</string>
     <string name="title_celsius">°C</string>
     <string name="title_detail">Detail</string>
     <string name="title_see_more">See More</string>
     <string name="title_wind_gust">Wind Gust</string>
+    <string name="title_uv">UV</string>
+    <string name="text_degree">°C</string>
+    <string name="text_percent">%</string>
+    <string name="text_wind_speed">km/h</string>
+    <string name="text_wind_degree">°</string>
+    <string name="text_pressure">mbar</string>
+    <string name="text_fail_to_parse_json">Fail to parse JSON</string>
+    <string name="text_test_desc">Cloudy</string>
+    <string name="text_test_day_of_week">S</string>
+    <string name="text_test">26</string>
+    <string name="text_test_date">19/03</string>
+    <string name="text_test_time">12:34</string>
+    <string name="text_test_month">March</string>
 </resources>

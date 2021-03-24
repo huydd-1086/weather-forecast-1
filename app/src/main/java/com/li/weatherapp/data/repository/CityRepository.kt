@@ -19,4 +19,10 @@ class CityRepository private constructor(
     override fun getFavoriteCities(callback: OnDataLoadCallback<MutableList<City>>) {
         local.getFavoriteCities(callback)
     }
+
+    companion object {
+        private var instance: CityRepository? = null
+        fun getInstance(local: CityDataSource.Local) =
+            instance ?: CityRepository(local).also { instance = it }
+    }
 }

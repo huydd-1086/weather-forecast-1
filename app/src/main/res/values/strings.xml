@@ -26,7 +26,6 @@
     <string name="text_wind_speed">km/h</string>
     <string name="text_wind_degree">°</string>
     <string name="text_pressure">mbar</string>
-    <string name="text_fail_to_parse_json">Fail to parse JSON</string>
     <string name="text_test_desc">Cloudy</string>
     <string name="text_test_day_of_week">S</string>
     <string name="text_test">26</string>
@@ -61,4 +60,6 @@
     <string name="text_harmful_air_range">100 - 149</string>
     <string name="text_very_harmful_air_range">150 - 249</string>
     <string name="text_dangerous_air_range">250+</string>
+    <string name="text_test_lat">21.0203727</string>
+    <string name="text_test_lon">105.7885139</string>
 </resources>

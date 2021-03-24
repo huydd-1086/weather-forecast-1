@@ -10,4 +10,9 @@
     <color name="orange_pizazz">#ff9500</color>
     <color name="blue_cyan">#00f2ff</color>
     <color name="purple_strike_master">#91688C</color>
+    <color name="chartreuse">#88F707</color>
+    <color name="scarlet">#F72007</color>
+    <color name="rose">#F70783</color>
+    <color name="shocking_pink">#F707B9</color>
+    <color name="electric_violet">#AA07F7</color>
 </resources>

@@ -16,7 +16,6 @@
     <string name="title_description">Cloudy</string>
     <string name="title_weather_detail">Weather Detail</string>
     <string name="title_favorite">Favorite</string>
-    <string name="title_air_quality">Air Quality</string>
     <string name="title_celsius">°C</string>
     <string name="title_detail">Detail</string>
     <string name="title_see_more">See More</string>
@@ -34,4 +33,32 @@
     <string name="text_test_date">19/03</string>
     <string name="text_test_time">12:34</string>
     <string name="text_test_month">March</string>
+    <string name="title_activity_air_quality">AirQualityActivity</string>
+    <string name="title_air_quality">Air Quality</string>
+    <string name="test_title_bad">BAD</string>
+    <string name="bad_air_quality_description">The air has reached a high level of pollution that is not suitable for sensitive groups. Please limit out</string>
+    <string name="title_CO2">CO2</string>
+    <string name="title_SO2">SO2</string>
+    <string name="title_NO2">NO2</string>
+    <string name="title_air_quality_range">Air Quality Range</string>
+    <string name="title_wonderful">Wonderful</string>
+    <string name="text_wonderful_air_range">0 - 19</string>
+    <string name="text_wonderful_air_description">Air quality is ideal for most subjects. Enjoy normal outdoor activities</string>
+    <string name="text_good_air_description">Air quality is acceptable for most subjects but not suitable for some sensitive subjects.</string>
+    <string name="text_bad_air_description">The air has a high level of pollution and is not suitable for the sensitive group. Reduce the time spent outside if the body develops respiratory symptoms.</string>
+    <string name="text_harmful_air_description">
+        Sensitive groups will experience immediate health effects. Healthy subjects may experience shortness of breath, itchy neck.</string>
+    <string name="text_very_harmful_air_description">
+        Sensitive groups will feel the impact immediately and should avoid outdoor activities. Healthy subjects may experience difficulty and itchy neck, consider staying at home to avoid activities outside</string>
+    <string name="text_dangerous_air_description"> Any exposure to the air for even a few minutes can have serious health effects. Avoid outdoor activities</string>
+    <string name="title_good">Good</string>
+    <string name="title_bad">Bad</string>
+    <string name="title_harmful">Harmful</string>
+    <string name="title_very_harmful">Very Harmful</string>
+    <string name="title_dangerous">Dangerous</string>
+    <string name="text_good_air_range">20 - 49</string>
+    <string name="text_bad_air_range">50 - 99</string>
+    <string name="text_harmful_air_range">100 - 149</string>
+    <string name="text_very_harmful_air_range">150 - 249</string>
+    <string name="text_dangerous_air_range">250+</string>
 </resources>

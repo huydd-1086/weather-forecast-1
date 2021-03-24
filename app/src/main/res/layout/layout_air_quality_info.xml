@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textCO2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/title_CO2"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical30"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCO2Info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical30"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical5"
+        app:layout_constraintTop_toBottomOf="@id/textCO2" />
+
+    <View
+        android:id="@+id/viewCO2"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/textCO2Info"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical30"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSO2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/title_SO2"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical50"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical30"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSO2Info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical50"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical30"
+        app:layout_constraintTop_toBottomOf="@id/textSO2" />
+
+    <View
+        android:id="@+id/viewSO2"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/textCO2Info"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical50"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNO2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/title_NO2"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical70"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical50"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNO2Info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical70"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical50"
+        app:layout_constraintTop_toBottomOf="@id/textNO2" />
+
+    <View
+        android:id="@+id/viewNO2"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/textCO2Info"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical70"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textPM10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/title_SO2"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical95"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical70"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textPM10Info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical95"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical70"
+        app:layout_constraintTop_toBottomOf="@id/textPM10" />
+
+    <include
+        android:id="@+id/layoutAirQualityDescription"
+        layout="@layout/layout_air_quality_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical95"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical5"
+        app:layout_constraintTop_toBottomOf="@id/textCO2Info" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,6 +37,7 @@
     <string name="title_NO2">NO2</string>
     <string name="title_air_quality_range">Air Quality Range</string>
     <string name="title_wonderful">Wonderful</string>
+    <string name="title_allow">Allow</string>
     <string name="text_bad_air_quality_description">The air has reached a high level of pollution that is not suitable for sensitive groups. Please limit out</string>
     <string name="text_wonderful_air_range">0 - 19</string>
     <string name="text_wonderful_air_description">Air quality is ideal for most subjects. Enjoy normal outdoor activities</string>
@@ -74,4 +75,6 @@
     <string name="text_test_date">19/03</string>
     <string name="text_test_time">12:34</string>
     <string name="text_test_month">March</string>
+    <string name="text_permission">Allow Permission to get Weather Forecast</string>
+    <string name="text_warning_location">Can not get location</string>
 </resources>

@@ -10,10 +10,7 @@ import com.li.weatherapp.base.BaseFragment
 import com.li.weatherapp.ui.currentweather.CurrentWeatherFragment
 import com.li.weatherapp.ui.dailyforecast.DailyForecastFragment
 import com.li.weatherapp.ui.news.NewsFragment
-import com.li.weatherapp.ui.setting.SettingActivity
-import com.li.weatherapp.utils.Constants.DRAWABLE_ZERO_BOUND
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.layout_appbar.*
 
 class MainActivity : BaseActivity() {
 
@@ -30,16 +27,7 @@ class MainActivity : BaseActivity() {
                 R.id.menuHourly -> showFragment(hourlyForecastFragment)
                 R.id.menuDaily -> showFragment(dailyForecastFragment)
                 R.id.menuFavorite -> showFragment(favoriteCitiesFragment)
-                R.id.menuNews -> {
-                    showFragment(newsFragment)
-                    textLocation.text = resources.getString(R.string.title_news)
-                    textLocation.setCompoundDrawablesWithIntrinsicBounds(
-                        DRAWABLE_ZERO_BOUND,
-                        DRAWABLE_ZERO_BOUND,
-                        DRAWABLE_ZERO_BOUND,
-                        DRAWABLE_ZERO_BOUND
-                    )
-                }
+                R.id.menuNews -> showFragment(newsFragment)
             }
             true
         }
@@ -47,16 +35,16 @@ class MainActivity : BaseActivity() {
     override val layoutResource get() = R.layout.activity_main
 
     override fun initViews() {
+    }
+
+    override fun initData() {
+    }
+
+    override fun initActions() {
         bottomNavigationView.apply {
             setOnNavigationItemSelectedListener(onBottomNavigationItemSelect)
             selectedItemId = R.id.menuCurrentWeather
         }
-        buttonSetting.setOnClickListener {
-            startActivity(SettingActivity.getIntent(this))
-        }
-    }
-
-    override fun initData() {
     }
 
     private fun showFragment(fragment: BaseFragment) =

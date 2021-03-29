@@ -19,13 +19,15 @@ class NewsActivity : BaseActivity() {
         title?.let {
             textTitleNews.text = title
         }
-
-        buttonBackNews.setOnClickListener {
-            finish()
-        }
     }
 
     override fun initData() {
+    }
+
+    override fun initActions() {
+        buttonBackNews.setOnClickListener {
+            finish()
+        }
     }
 
     companion object {

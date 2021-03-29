@@ -19,7 +19,7 @@ class SharePreferenceHelper private constructor(context: Context) {
     fun <T> get(key: String, data: T): T = when (data) {
         is String -> sharedPreferences.getString(key, null) as T
         is Double -> sharedPreferences.getString(key, Constants.DEFAULT_STRING) as T
-        else -> throw TypeCastException(R.string.error_not_type.toString())
+        else -> throw TypeCastException(R.string.text_error_not_type.toString())
     }
 
     companion object {

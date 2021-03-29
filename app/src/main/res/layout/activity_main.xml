@@ -7,18 +7,6 @@
     android:background="@drawable/bg_bright"
     tools:context=".ui.main.MainActivity">
 
-    <include
-        android:id="@+id/includeLayout"
-        layout="@layout/layout_appbar" />
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="@dimen/dp_1"
-        android:background="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <FrameLayout
         android:id="@+id/frameMain"
         android:layout_width="0dp"
@@ -26,7 +14,7 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/includeLayout" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

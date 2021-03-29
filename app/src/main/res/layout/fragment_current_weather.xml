@@ -10,26 +10,59 @@
         android:layout_height="wrap_content"
         tools:context=".ui.currentweather.CurrentWeatherFragment">
 
-        <TextView
-            android:id="@+id/textCurrentTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_10"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp_20"
-            android:fontFamily="@font/andes"
+        <View
+            android:id="@+id/viewTitleCurrentWeather"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/transparent_malachite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textTitleCurrentWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_today"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintBottom_toBottomOf="@id/viewTitleCurrentWeather"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/buttonSettingCurrentWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/text_image_description"
+            app:layout_constraintBottom_toBottomOf="@id/viewTitleCurrentWeather"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_setting" />
+
+        <TextView
+            android:id="@+id/textCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/andes"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewTitleCurrentWeather" />
+
+        <TextView
             android:id="@+id/textCurrentTemper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/andes"
             android:textColor="@android:color/white"
             android:textSize="@dimen/sp_80"
             android:textStyle="bold"
-            android:fontFamily="@font/andes"
             app:layout_constraintEnd_toStartOf="@+id/guidelineVertical60"
             app:layout_constraintStart_toStartOf="@id/viewLine"
             app:layout_constraintTop_toBottomOf="@id/textCurrentTime" />
@@ -38,11 +71,11 @@
             android:id="@+id/textCelsius"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/andes"
             android:text="@string/title_celsius"
             android:textColor="@android:color/white"
             android:textSize="@dimen/sp_54"
             android:textStyle="bold"
-            android:fontFamily="@font/andes"
             app:layout_constraintStart_toEndOf="@+id/textCurrentTemper"
             app:layout_constraintTop_toBottomOf="@id/textCurrentTime" />
 

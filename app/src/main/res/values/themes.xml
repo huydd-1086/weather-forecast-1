@@ -35,4 +35,9 @@
     <style name="AboutDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:background">@color/purple_strike_master</item>
     </style>
+
+    <style name="Theme.WeatherApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

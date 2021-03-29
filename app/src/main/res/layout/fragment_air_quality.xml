@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_bright"
-    tools:context=".ui.airquality.AirQualityActivity">
+    tools:context=".ui.airquality.AirQualityFragment">
 
     <View
-        android:id="@+id/viewTitleWeatherDetail"
+        android:id="@+id/viewTitleAirQuality"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/transparent_malachite"
@@ -17,27 +16,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/buttonBack"
+        android:id="@+id/buttonBackAirQuality"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_8"
         android:layout_marginEnd="@dimen/dp_10"
         android:background="@android:color/transparent"
         android:tint="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@id/viewTitleWeatherDetail"
+        app:layout_constraintBottom_toBottomOf="@id/viewTitleAirQuality"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_arrow_back"
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/textTitle"
+        android:id="@+id/textTitleAirQuality"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_air_quality"
         android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
-        app:layout_constraintBottom_toBottomOf="@id/viewTitleWeatherDetail"
+        app:layout_constraintBottom_toBottomOf="@id/viewTitleAirQuality"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -49,7 +48,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewTitleWeatherDetail">
+        app:layout_constraintTop_toBottomOf="@id/viewTitleAirQuality">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -81,7 +80,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_8"
-                android:text="@string/test_title_bad"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/sp_24"
                 android:textStyle="bold"
@@ -95,7 +93,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_8"
                 android:gravity="center"
-                android:text="@string/bad_air_quality_description"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/sp_16"
                 app:layout_constraintEnd_toEndOf="@id/guidelineVertical80"

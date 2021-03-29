@@ -12,11 +12,14 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutResource)
-        initViews()
         initData()
+        initViews()
+        initActions()
     }
 
     protected abstract fun initViews()
 
     protected abstract fun initData()
+
+    protected abstract fun initActions()
 }

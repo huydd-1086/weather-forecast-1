@@ -10,6 +10,7 @@ import com.li.weatherapp.data.repository.CurrentWeatherRepository
 import com.li.weatherapp.data.source.local.CurrentCityLocalDataSource
 import com.li.weatherapp.data.source.remote.AQIRemoteDataSource
 import com.li.weatherapp.data.source.remote.CurrentWeatherRemoteDataSource
+import com.li.weatherapp.ui.setting.SettingFragment
 import com.li.weatherapp.utils.*
 import kotlinx.android.synthetic.main.fragment_current_weather.*
 import kotlinx.android.synthetic.main.layout_air_quality.*
@@ -45,6 +46,9 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
     }
 
     override fun initActions() {
+        buttonSettingCurrentWeather.setOnClickListener {
+            fragmentManager?.replaceFragment(R.id.frameMain, SettingFragment())
+        }
     }
 
     override fun showCurrentWeatherForecast(weather: CurrentWeather) {

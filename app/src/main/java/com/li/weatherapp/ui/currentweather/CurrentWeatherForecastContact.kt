@@ -9,12 +9,13 @@ interface CurrentWeatherForecastContact {
     interface View : BaseView {
         fun showCurrentWeatherForecast(weather: CurrentWeather)
         fun showAQIForecast(airQuality: AQI)
-        fun updateLocation(lat: String, lon: String,cityName: String)
+        fun updateLocation(lat: String, lon: String)
     }
 
     interface Presenter : BasePresenter {
         fun getCurrentWeatherForecast(lat: String, lon: String)
         fun getAQI(lat: String, lon: String)
         fun getCurrentLocation()
+        fun setCityName(cityName: String)
     }
 }

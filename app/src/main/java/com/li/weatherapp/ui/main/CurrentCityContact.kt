@@ -6,6 +6,5 @@ interface CurrentCityContact {
     interface Presenter : BasePresenter {
         fun setLatitude(lat: Double)
         fun setLongitude(lon: Double)
-        fun setCityName(cityName: String)
     }
 }

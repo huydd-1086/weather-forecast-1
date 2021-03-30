@@ -45,9 +45,11 @@ class CurrentWeatherPresenter(
     override fun getCurrentLocation() {
         view.updateLocation(
             currentCityRepository.getLatitude(),
-            currentCityRepository.getLongitude(),
-            currentCityRepository.getCityName()
+            currentCityRepository.getLongitude()
         )
+    }
+    override fun setCityName(cityName: String) {
+        currentCityRepository.setCityName(cityName)
     }
 
     override fun start() {

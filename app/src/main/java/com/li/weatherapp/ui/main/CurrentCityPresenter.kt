@@ -14,10 +14,6 @@ class CurrentCityPresenter(
         repository.setLongitude(lon)
     }
 
-    override fun setCityName(cityName: String) {
-        repository.setCityName(cityName)
-    }
-
     override fun start() {
     }
 }

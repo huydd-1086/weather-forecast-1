@@ -22,6 +22,7 @@ import java.util.*
 
 class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.View {
     private var presenter: CurrentWeatherForecastContact.Presenter? = null
+    private var cityName = ""
 
     override val layoutResource get() = R.layout.fragment_current_weather
 
@@ -64,6 +65,8 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
             weather.wind.degree.toInt().toString() + Constants.DEFAULT_KILOMETER
         textWindDegree.text =
             weather.currentTemp.humidity.toInt().toString() + Constants.DEFAULT_PERCENT
+        textTitleCurrentWeather.text = weather.cityName
+        this.cityName = weather.cityName
 
     }
 
@@ -76,10 +79,10 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
             context?.let { AirPollutionUtils.getAirPollutionDescription(it, airQuality.aqi) }
     }
 
-    override fun updateLocation(lat: String, lon: String, cityName: String) {
+    override fun updateLocation(lat: String, lon: String) {
         presenter?.getCurrentWeatherForecast(lat, lon)
         presenter?.getAQI(lat, lon)
-        textTitleCurrentWeather.text = cityName
+        presenter?.setCityName(cityName)
     }
 
     override fun showMessage(data: Any) {

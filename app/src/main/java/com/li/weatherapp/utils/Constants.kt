@@ -10,8 +10,11 @@ object Constants {
     const val LATITUDE_KEY = "PREFS_LATITUDE_KEY"
     const val LONGITUDE_KEY = "PREFS_LONGITUDE_KEY"
     const val CITY_NAME_KEY = "PREFS_CITY_NAME_KEY"
+    const val LANGUAGE_KEY = "PREFS_LANGUAGE_KEY"
     const val DEFAULT_STRING = ""
     const val DEFAULT_CELSIUS = "°C"
     const val DEFAULT_KILOMETER = "Km/h"
     const val DEFAULT_PERCENT = "%"
+    const val EXTRA_LATITUDE="com.li.weatherapp.utils.EXTRA_LATITUDE"
+    const val EXTRA_LONGITUDE="com.li.weatherapp.utils.EXTRA_LONGITUDE"
 }

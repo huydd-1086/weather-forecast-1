@@ -32,7 +32,7 @@ class MainActivity : BaseActivity(), BaseView {
     private val favoriteCitiesFragment = CurrentWeatherFragment()
     private val newsFragment = NewsFragment()
     private var locationProvider: FusedLocationProviderClient? = null
-    private var presenter: CurrentCityContact.Presenter? = null
+    private var presenter: CurrentCityContract.Presenter? = null
 
     private val onBottomNavigationItemSelect =
         BottomNavigationView.OnNavigationItemSelectedListener {
@@ -133,5 +133,10 @@ class MainActivity : BaseActivity(), BaseView {
         const val REQUEST_CODE = 1
 
         fun getIntent(context: Context) = Intent(context, MainActivity::class.java)
+
+        fun getIntentFromNotification(context: Context) =
+            Intent(context, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
     }
 }

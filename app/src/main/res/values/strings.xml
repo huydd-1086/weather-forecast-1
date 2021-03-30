@@ -77,4 +77,6 @@
     <string name="text_test_month">March</string>
     <string name="text_permission">Allow Permission to get Weather Forecast</string>
     <string name="text_warning_location">Can not get location</string>
+    <string name="text_notification_title">Today Weather</string>
+    <string name="text_notification_temp_separate"> - </string>
 </resources>

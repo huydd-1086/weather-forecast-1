@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_8"
+    android:paddingEnd="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_8">
+
+    <ImageView
+        android:id="@+id/imageIconNotification"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:contentDescription="@string/text_test"
+        android:src="@drawable/ic_weather_place_holder" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_toEndOf="@id/imageIconNotification"
+        android:text="@string/text_notification_title"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textTemperatureNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageIconNotification"
+        android:text="@string/text_test"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_40"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textDegreeNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageIconNotification"
+        android:layout_toEndOf="@id/textTemperatureNotification"
+        android:text="@string/text_degree"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_32" />
+
+    <TextView
+        android:id="@+id/textTemperatureMinNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTemperatureNotification"
+        android:text="@string/text_test"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_20" />
+
+    <TextView
+        android:id="@+id/textTemperatureMinMaxSeparateNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTemperatureNotification"
+        android:layout_toEndOf="@id/textTemperatureMinNotification"
+        android:text="@string/text_notification_temp_separate"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_20" />
+
+    <TextView
+        android:id="@+id/textTemperatureMaxNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTemperatureNotification"
+        android:layout_toEndOf="@id/textTemperatureMinMaxSeparateNotification"
+        android:text="@string/text_test"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_20" />
+
+    <TextView
+        android:id="@+id/textDescriptionNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageIconNotification"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_toEndOf="@id/textDegreeNotification"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/text_test_desc"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_32" />
+
+    <ImageView
+        android:id="@+id/imageHumidityNotification"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_alignStart="@id/textDescriptionNotification"
+        android:layout_alignTop="@id/textHumidityNotification"
+        android:layout_alignBottom="@id/textTemperatureMinNotification"
+        android:contentDescription="@string/text_test"
+        android:src="@drawable/ic_humidity" />
+
+    <TextView
+        android:id="@+id/textHumidityNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textTemperatureMinNotification"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_toEndOf="@id/imageHumidityNotification"
+        android:maxLength="2"
+        android:text="@string/text_test"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_20" />
+
+    <TextView
+        android:id="@+id/textPercentNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textTemperatureMinNotification"
+        android:layout_toEndOf="@id/textHumidityNotification"
+        android:text="@string/text_percent"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_20" />
+
+    <ImageView
+        android:id="@+id/imageWindNotification"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_alignTop="@id/textHumidityNotification"
+        android:layout_alignBottom="@id/textTemperatureMinNotification"
+        android:layout_marginStart="@dimen/dp_32"
+        android:layout_toEndOf="@id/textPercentNotification"
+        android:contentDescription="@string/text_test"
+        android:src="@drawable/ic_wind" />
+
+    <TextView
+        android:id="@+id/textWindNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textTemperatureMinNotification"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_toEndOf="@id/imageWindNotification"
+        android:text="@string/text_test"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_20" />
+
+    <TextView
+        android:id="@+id/textWindSpeedNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textTemperatureMinNotification"
+        android:layout_toEndOf="@id/textWindNotification"
+        android:maxLength="4"
+        android:text="@string/text_wind_speed"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_20" />
+</RelativeLayout>

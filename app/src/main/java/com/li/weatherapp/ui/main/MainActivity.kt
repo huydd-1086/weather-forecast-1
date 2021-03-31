@@ -131,7 +131,9 @@ class MainActivity : BaseActivity(), BaseView {
     companion object {
         const val REQUEST_CODE = 1
 
-        fun getIntent(context: Context) = Intent(context, MainActivity::class.java)
+        fun getIntent(context: Context): Intent =
+            Intent(context, MainActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
 
         fun getIntentFromNotification(context: Context) =
             Intent(context, MainActivity::class.java).apply {

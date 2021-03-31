@@ -19,6 +19,7 @@ import com.li.weatherapp.data.source.local.CurrentCityLocalDataSource
 import com.li.weatherapp.ui.warning.WarningFragment
 import com.li.weatherapp.ui.currentweather.CurrentWeatherFragment
 import com.li.weatherapp.ui.dailyforecast.DailyForecastFragment
+import com.li.weatherapp.ui.hourly.HourlyForecastFragment
 import com.li.weatherapp.ui.news.NewsFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import com.li.weatherapp.utils.SharePreferenceHelper
@@ -27,7 +28,7 @@ import com.li.weatherapp.utils.showToast
 class MainActivity : BaseActivity(), BaseView {
 
     private val currentWeatherFragment = CurrentWeatherFragment()
-    private val hourlyForecastFragment = CurrentWeatherFragment()
+    private val hourlyForecastFragment = HourlyForecastFragment()
     private val dailyForecastFragment = DailyForecastFragment()
     private val favoriteCitiesFragment = CurrentWeatherFragment()
     private val newsFragment = NewsFragment()

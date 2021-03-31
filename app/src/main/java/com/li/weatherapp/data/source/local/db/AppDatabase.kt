@@ -25,10 +25,10 @@ class AppDatabase private constructor(
         private const val DATABASE_VERSION = 1
         private const val CREATE_TABLE_CITY =
             "CREATE TABLE ${City.CITY_TABLE_NAME} (" +
-                    "${City.CITY_ID} INTEGER PRIMARY KEY, " +
-                    "${City.CITY_NAME} TEXT, " +
-                    "${City.CITY_LATITUDE} REAL, " +
-                    "${City.CITY_LONGITUDE} REAL)"
+                "${City.CITY_ID} INTEGER PRIMARY KEY, " +
+                "${City.CITY_NAME} TEXT, " +
+                "${City.CITY_LATITUDE} REAL, " +
+                "${City.CITY_LONGITUDE} REAL)"
         private const val DROP_TABLE_CITY =
             "DROP TABLE IF EXIST " + City.CITY_TABLE_NAME
         private var instance: AppDatabase? = null

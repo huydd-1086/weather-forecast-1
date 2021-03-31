@@ -15,6 +15,6 @@ object Constants {
     const val DEFAULT_CELSIUS = "°C"
     const val DEFAULT_KILOMETER = "Km/h"
     const val DEFAULT_PERCENT = "%"
-    const val EXTRA_LATITUDE="com.li.weatherapp.utils.EXTRA_LATITUDE"
-    const val EXTRA_LONGITUDE="com.li.weatherapp.utils.EXTRA_LONGITUDE"
+    const val EXTRA_LATITUDE = "com.li.weatherapp.utils.EXTRA_LATITUDE"
+    const val EXTRA_LONGITUDE = "com.li.weatherapp.utils.EXTRA_LONGITUDE"
 }

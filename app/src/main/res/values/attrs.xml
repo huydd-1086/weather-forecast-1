@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="attr_declare">
+        <attr name="color_tint_image_view" format="color" />
+        <attr name="color_background_view_line" format="color" />
+    </declare-styleable>
+</resources>

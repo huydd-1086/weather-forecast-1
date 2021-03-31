@@ -52,6 +52,9 @@ class MainActivity : BaseActivity(), BaseView {
     }
 
     override fun initActions() {
+    }
+
+    override fun initData() {
         presenter = CurrentCityPresenter(
             CurrentCityRepository.getInstance(
                 CurrentCityLocalDataSource.getInstance(
@@ -59,9 +62,6 @@ class MainActivity : BaseActivity(), BaseView {
                 )
             )
         )
-    }
-
-    override fun initData() {
         locationProvider = LocationServices.getFusedLocationProviderClient(this)
         getCurrentLocation()
     }
@@ -109,7 +109,6 @@ class MainActivity : BaseActivity(), BaseView {
                 }
                 setUpNavigation()
             }
-
         } else {
             ActivityCompat.requestPermissions(
                 this,

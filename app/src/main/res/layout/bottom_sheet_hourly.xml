@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:paddingTop="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_24">
+
+    <TextView
+        android:id="@+id/textDateBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andes"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewTop"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginStart="@dimen/dp_120"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_120"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textDateBottomSheet" />
+
+    <ImageView
+        android:id="@+id/imageDescriptionBottomSheet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:src="@drawable/ic_cloud"
+        app:layout_constraintBottom_toBottomOf="@id/textTemperatureBottomSheet"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/textTemperatureBottomSheet"
+        app:layout_constraintTop_toTopOf="@id/textTemperatureBottomSheet"
+        app:layout_constraintWidth_percent="0.2"
+        app:tint="@android:color/white"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textTemperatureBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTop" />
+
+    <TextView
+        android:id="@+id/textDegreeBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_degree"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_56"
+        app:layout_constraintStart_toEndOf="@id/textTemperatureBottomSheet"
+        app:layout_constraintTop_toTopOf="@id/textTemperatureBottomSheet" />
+
+    <TextView
+        android:id="@+id/textDescriptionBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andes"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_32"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTemperatureBottomSheet" />
+
+    <TextView
+        android:id="@+id/textRealFeelTitleBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:fontFamily="@font/andes"
+        android:text="@string/title_real_feel"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="@id/textRealFeelBottomSheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textRealFeelBottomSheet" />
+
+    <TextView
+        android:id="@+id/textRealFeelBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toStartOf="@+id/textDegreeReelFeel"
+        app:layout_constraintTop_toBottomOf="@id/textDescriptionBottomSheet" />
+
+    <TextView
+        android:id="@+id/textDegreeReelFeel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_degree"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textRealFeelBottomSheet" />
+
+    <TextView
+        android:id="@+id/textWindTitleBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andes"
+        android:text="@string/title_wind"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="@id/textWindBottomSheet"
+        app:layout_constraintStart_toStartOf="@id/textRealFeelTitleBottomSheet"
+        app:layout_constraintTop_toTopOf="@id/textWindBottomSheet" />
+
+    <TextView
+        android:id="@+id/textWindBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toStartOf="@id/textWindSpeed"
+        app:layout_constraintTop_toBottomOf="@id/textRealFeelBottomSheet" />
+
+    <TextView
+        android:id="@+id/textWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_wind_speed"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textWindBottomSheet" />
+
+    <TextView
+        android:id="@+id/textWindDegreeTitleBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andes"
+        android:text="@string/title_wind_degree"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="@id/textWindDegreeBottomSheet"
+        app:layout_constraintStart_toStartOf="@id/textRealFeelTitleBottomSheet"
+        app:layout_constraintTop_toTopOf="@id/textWindDegreeBottomSheet" />
+
+    <TextView
+        android:id="@+id/textWindDegreeBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toStartOf="@+id/textWindDegree"
+        app:layout_constraintTop_toBottomOf="@id/textWindBottomSheet" />
+
+    <TextView
+        android:id="@+id/textWindDegree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_wind_degree"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textWindDegreeBottomSheet" />
+
+    <TextView
+        android:id="@+id/textHumidityTitleBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andes"
+        android:text="@string/title_humidity"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="@id/textHumidityBottomSheet"
+        app:layout_constraintStart_toStartOf="@id/textRealFeelTitleBottomSheet"
+        app:layout_constraintTop_toTopOf="@+id/textHumidityBottomSheet" />
+
+    <TextView
+        android:id="@+id/textHumidityBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toStartOf="@+id/textPercentHumidity"
+        app:layout_constraintTop_toBottomOf="@id/textWindDegreeBottomSheet" />
+
+    <TextView
+        android:id="@+id/textPercentHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_percent"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textHumidityBottomSheet" />
+
+    <TextView
+        android:id="@+id/textPressureTitleBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andes"
+        android:text="@string/title_pressure"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="@id/textPressureBottomSheet"
+        app:layout_constraintStart_toStartOf="@id/textRealFeelTitleBottomSheet"
+        app:layout_constraintTop_toTopOf="@+id/textPressureBottomSheet" />
+
+    <TextView
+        android:id="@+id/textPressureBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toStartOf="@+id/textPressure"
+        app:layout_constraintTop_toBottomOf="@+id/textHumidityBottomSheet" />
+
+    <TextView
+        android:id="@+id/textPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_pressure"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textPressureBottomSheet" />
+
+    <TextView
+        android:id="@+id/textCloudTitleBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andes"
+        android:text="@string/title_cloud"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="@id/textCloudBottomSheet"
+        app:layout_constraintStart_toStartOf="@id/textRealFeelTitleBottomSheet"
+        app:layout_constraintTop_toTopOf="@+id/textCloudBottomSheet" />
+
+    <TextView
+        android:id="@+id/textCloudBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toStartOf="@+id/textPercentCloud"
+        app:layout_constraintTop_toBottomOf="@+id/textPressureBottomSheet" />
+
+    <TextView
+        android:id="@+id/textPercentCloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_percent"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textCloudBottomSheet" />
+
+    <TextView
+        android:id="@+id/textUVTitleBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andes"
+        android:text="@string/title_uv"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="@+id/textUVBottomSheet"
+        app:layout_constraintStart_toStartOf="@id/textRealFeelTitleBottomSheet"
+        app:layout_constraintTop_toTopOf="@+id/textUVBottomSheet" />
+
+    <TextView
+        android:id="@+id/textUVBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:fontFamily="@font/andes"
+        android:text="@string/text_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCloudBottomSheet" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guildLineVertical50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

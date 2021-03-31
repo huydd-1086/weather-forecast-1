@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
         android:text="@string/title_air_quality_range"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,7 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
         android:text="@string/title_wonderful"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewWonderfulAir" />
@@ -41,7 +39,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_wonderful_air_range"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintBaseline_toBaselineOf="@+id/textWonderfulAir"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -53,7 +50,6 @@
         android:layout_marginTop="@dimen/dp_8"
         android:gravity="start"
         android:text="@string/text_wonderful_air_description"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_16"
         app:layout_constraintEnd_toEndOf="@id/guidelineVertical70"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +71,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
         android:text="@string/title_good"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewGoodAir" />
@@ -85,7 +80,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_good_air_range"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintBaseline_toBaselineOf="@+id/textGoodAir"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -97,7 +91,6 @@
         android:layout_marginTop="@dimen/dp_8"
         android:gravity="start"
         android:text="@string/text_good_air_description"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_16"
         app:layout_constraintEnd_toEndOf="@id/guidelineVertical70"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,7 +112,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
         android:text="@string/title_bad"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewBadAir" />
@@ -129,7 +121,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_bad_air_range"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintBaseline_toBaselineOf="@+id/textBadAir"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -141,7 +132,6 @@
         android:layout_marginTop="@dimen/dp_8"
         android:gravity="start"
         android:text="@string/text_bad_air_description"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_16"
         app:layout_constraintEnd_toEndOf="@id/guidelineVertical70"
         app:layout_constraintStart_toStartOf="parent"
@@ -163,7 +153,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
         android:text="@string/title_harmful"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewHarmfulAir" />
@@ -173,7 +162,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_harmful_air_range"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintBaseline_toBaselineOf="@+id/textHarmfulAir"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -185,7 +173,6 @@
         android:layout_marginTop="@dimen/dp_8"
         android:gravity="start"
         android:text="@string/text_harmful_air_description"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_16"
         app:layout_constraintEnd_toEndOf="@id/guidelineVertical70"
         app:layout_constraintStart_toStartOf="parent"
@@ -207,7 +194,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
         android:text="@string/title_very_harmful"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewVeryHarmfulAir" />
@@ -217,7 +203,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_very_harmful_air_range"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintBaseline_toBaselineOf="@+id/textVeryHarmfulAir"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -229,7 +214,6 @@
         android:layout_marginTop="@dimen/dp_8"
         android:gravity="start"
         android:text="@string/text_very_harmful_air_description"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_16"
         app:layout_constraintEnd_toEndOf="@id/guidelineVertical70"
         app:layout_constraintStart_toStartOf="parent"
@@ -251,7 +235,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
         android:text="@string/title_dangerous"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewDangerousAir" />
@@ -261,7 +244,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_dangerous_air_range"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintBaseline_toBaselineOf="@+id/textDangerousAir"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -273,7 +255,6 @@
         android:layout_marginTop="@dimen/dp_8"
         android:gravity="start"
         android:text="@string/text_dangerous_air_description"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_16"
         app:layout_constraintEnd_toEndOf="@id/guidelineVertical70"
         app:layout_constraintStart_toStartOf="parent"

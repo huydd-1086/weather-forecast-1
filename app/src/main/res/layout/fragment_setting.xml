@@ -18,7 +18,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_setting"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintBottom_toBottomOf="@id/viewTitleSetting"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -32,11 +31,11 @@
         android:layout_marginStart="@dimen/dp_8"
         android:background="@android:color/transparent"
         android:contentDescription="@string/text_image_description"
-        android:tint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@id/viewTitleSetting"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_arrow_back" />
+        app:srcCompat="@drawable/ic_arrow_back"
+        app:tint="?attr/color_tint_image_view" />
 
     <ImageView
         android:id="@+id/imageNotification"
@@ -50,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/textNotificationTitle"
         app:layout_constraintWidth_percent="0.05"
-        app:tint="@android:color/white" />
+        app:tint="?attr/color_tint_image_view" />
 
     <TextView
         android:id="@+id/textNotificationTitle"
@@ -58,9 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_8"
         android:layout_marginTop="@dimen/dp_16"
-        android:fontFamily="@font/andes"
         android:text="@string/title_notification"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_20"
         app:layout_constraintStart_toEndOf="@id/imageNotification"
         app:layout_constraintTop_toBottomOf="@+id/viewTitleSetting" />
@@ -86,7 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/textLanguageTitle"
         app:layout_constraintWidth_percent="0.05"
-        app:tint="@android:color/white" />
+        app:tint="?attr/color_tint_image_view" />
 
     <TextView
         android:id="@+id/textLanguageTitle"
@@ -94,9 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_8"
         android:layout_marginTop="@dimen/dp_8"
-        android:fontFamily="@font/andes"
         android:text="@string/title_language"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_20"
         app:layout_constraintStart_toEndOf="@id/imageLanguage"
         app:layout_constraintTop_toBottomOf="@id/textNotificationTitle" />
@@ -116,7 +111,7 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/dp_1"
         android:layout_marginTop="@dimen/dp_16"
-        android:background="@android:color/white"
+        android:background="?attr/color_background_view_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textLanguageTitle"
@@ -134,7 +129,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/textAbout"
         app:layout_constraintWidth_percent="0.05"
-        app:tint="@android:color/white" />
+        app:tint="?attr/color_tint_image_view" />
 
     <TextView
         android:id="@+id/textAbout"
@@ -143,9 +138,7 @@
         android:layout_marginStart="@dimen/dp_8"
         android:layout_marginTop="@dimen/dp_8"
         android:layout_marginEnd="@dimen/dp_16"
-        android:fontFamily="@font/andes"
         android:text="@string/title_about"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imageAbout"

@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.WeatherApp">
+        android:theme="@style/WeatherAppLight">
         <activity
             android:name=".ui.splash.Splash"
             android:theme="@style/SplashTheme">

@@ -12,6 +12,7 @@ object APIConstants {
     const val OPENWEATHER_LON = "lon"
     const val OPENWEATHER_EXCLUDE = "exclude"
     const val OPENWEATHER_EXCLUDE_CURRENT_HOURLY_MINUTELY = "current,hourly,minutely"
+    const val OPENWEATHER_EXCLUDE_CURRENT_MINUTELY_DAILY = "current,daily,minutely"
     const val OPENWEATHER_UNITS = "units"
     const val OPENWEATHER_METRIC = "metric"
 }

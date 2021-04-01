@@ -48,6 +48,7 @@ class CurrentWeatherPresenter(
             currentCityRepository.getLongitude()
         )
     }
+
     override fun setCityName(cityName: String) {
         currentCityRepository.setCityName(cityName)
     }

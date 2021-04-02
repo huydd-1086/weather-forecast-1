@@ -1,9 +1,10 @@
 package com.li.weatherapp.data.source.local.dao
 
-import com.li.weatherapp.data.model.City
+import com.li.weatherapp.data.model.SearchedCity
 
 interface FavoriteCityDAO {
-    fun insertFavoriteCity(city: City): Boolean
-    fun deleteFavoriteCity(id: String): Boolean
-    fun getFavoriteCities(): MutableList<City>
+    fun insertFavoriteCity(city: SearchedCity): Boolean
+    fun updateFavoriteCity(city: SearchedCity): Boolean
+    fun getFavoriteCities(): List<SearchedCity>
+    fun getRecentCities(): List<SearchedCity>
 }

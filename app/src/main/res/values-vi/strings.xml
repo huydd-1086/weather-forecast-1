@@ -82,4 +82,9 @@
     <string name="text_warning_location">Không lấy được vị trí</string>
     <string name="text_notification_title">Thời tiết hôm nay</string>
     <string name="text_notification_temp_separate"> - </string>
+    <string name="text_fill_city_name"> Vui Lòng Nhập Tên Thành Phố </string>
+    <string name="text_cannot_find_city_name"> Không Tìm Thấy Thành Phố </string>
+    <string name="text_add_to_favorite"> Thêm Vào Yêu Thích </string>
+    <string name="text_delete_favorite"> Đã Xóa Khỏi Thành Phố </string>
+    <string name="text_delete_fail"> Xóa Không Thành Công </string>
 </resources>

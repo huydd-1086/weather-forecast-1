@@ -1,37 +1,48 @@
 package com.li.weatherapp.data.source.local.dao
 
-import android.annotation.SuppressLint
-import com.li.weatherapp.data.model.City
-import com.li.weatherapp.data.model.City.Companion.CITY_ID
-import com.li.weatherapp.data.model.City.Companion.CITY_TABLE_NAME
+import com.li.weatherapp.data.model.SearchedCity
 import com.li.weatherapp.data.source.local.db.AppDatabase
+import com.li.weatherapp.utils.Constants
 
 class FavoriteCityDAOImpl private constructor(database: AppDatabase) : FavoriteCityDAO {
 
     private val writableDatabase = database.writableDatabase
     private val readableDatabase = database.readableDatabase
 
-    override fun insertFavoriteCity(city: City): Boolean {
+    override fun insertFavoriteCity(city: SearchedCity): Boolean {
         return writableDatabase.insert(
-            CITY_TABLE_NAME,
+            SearchedCity.CITY_TABLE_NAME,
             null,
             city.getContentValues()
         ) > 0
     }
 
-    override fun deleteFavoriteCity(id: String): Boolean {
-        return writableDatabase.delete(
-            CITY_TABLE_NAME,
-            "$CITY_ID = ?",
-            arrayOf(id)
+    override fun updateFavoriteCity(city: SearchedCity): Boolean {
+        return writableDatabase.update(
+            SearchedCity.CITY_TABLE_NAME,
+            city.getContentValues(),
+            "${SearchedCity.CITY_NAME} = ?",
+            arrayOf(city.name)
         ) > 0
     }
 
-    @SuppressLint("Recycle")
-    override fun getFavoriteCities(): MutableList<City> {
-        val cities = mutableListOf<City>()
+    override fun getFavoriteCities(): List<SearchedCity> {
+        val cities = mutableListOf<SearchedCity>()
+        val query =
+            "SELECT * FROM ${SearchedCity.CITY_TABLE_NAME} WHERE ${SearchedCity.CITY_IS_FAVORITE} = ${Constants.IS_FAVORITE_VALUE}"
+        val cursor = readableDatabase.rawQuery(query, null)
+        cursor.use {
+            while (it.moveToNext()) {
+                cities.add(SearchedCity(it))
+            }
+        }
+        return cities
+    }
+
+    override fun getRecentCities(): List<SearchedCity> {
+        val cities = mutableListOf<SearchedCity>()
         val cursor = readableDatabase.query(
-            CITY_TABLE_NAME,
+            SearchedCity.CITY_TABLE_NAME,
             null,
             null,
             null,
@@ -41,7 +52,7 @@ class FavoriteCityDAOImpl private constructor(database: AppDatabase) : FavoriteC
         )
         cursor.use {
             while (it.moveToNext()) {
-                cities.add(City(it))
+                cities.add(SearchedCity(it))
             }
         }
         return cities
@@ -51,8 +62,10 @@ class FavoriteCityDAOImpl private constructor(database: AppDatabase) : FavoriteC
         private var instance: FavoriteCityDAOImpl? = null
 
         fun getInstance(database: AppDatabase): FavoriteCityDAOImpl =
-            instance ?: getInstance(database).also {
-                instance = it
+            instance ?: synchronized(this) {
+                instance ?: FavoriteCityDAOImpl(database).also {
+                    instance = it
+                }
             }
     }
 }

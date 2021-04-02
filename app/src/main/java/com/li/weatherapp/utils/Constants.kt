@@ -19,4 +19,6 @@ object Constants {
     const val EXTRA_LATITUDE="com.li.weatherapp.utils.EXTRA_LATITUDE"
     const val EXTRA_LONGITUDE="com.li.weatherapp.utils.EXTRA_LONGITUDE"
     const val SHORT_DATE_FORMAT = "dd/MM"
+    const val IS_FAVORITE_VALUE = 1
+    const val NON_FAVORITE_VALUE = 0
 }

@@ -11,6 +11,7 @@ import com.li.weatherapp.data.source.local.CurrentCityLocalDataSource
 import com.li.weatherapp.data.source.remote.AQIRemoteDataSource
 import com.li.weatherapp.data.source.remote.CurrentWeatherRemoteDataSource
 import com.li.weatherapp.ui.airquality.AirQualityFragment
+import com.li.weatherapp.ui.search.SearchFragment
 import com.li.weatherapp.ui.setting.SettingFragment
 import com.li.weatherapp.ui.weatherdetail.WeatherDetailFragment
 import com.li.weatherapp.utils.*
@@ -70,6 +71,12 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
                 )
             }
         }
+        textTitleLocation.setOnClickListener {
+            fragmentManager?.replaceFragment(
+                R.id.frameMain,
+                SearchFragment()
+            )
+        }
     }
 
     override fun showCurrentWeatherForecast(weather: CurrentWeather) {
@@ -83,7 +90,7 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
         textWind.text = weather.wind.speed.toInt().withUnit(Constants.DEFAULT_KILOMETER)
         textWindDegree.text = weather.wind.degree.toInt().withUnit(Constants.DEFAULT_DEGREE)
         textHumidity.text = weather.currentTemp.humidity.toInt().withUnit(Constants.DEFAULT_PERCENT)
-        textTitleCurrentWeather.text = weather.cityName
+        textTitleLocation.text = weather.cityName
         this.cityName = weather.cityName
 
     }

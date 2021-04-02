@@ -1,8 +1,7 @@
 package com.li.weatherapp.utils
 
 object Constants {
-    const val MILLI_TO_SECOND = 1000L
-    const val TEMPERATURE_COEFFICIENT = 3
+    const val TEMPERATURE_COEFFICIENT = 2
     const val FULL_DATE_FORMAT = "dd/MM/yyyy"
     const val TIME_FORMAT = "HH:mm"
     const val DAY_OF_WEEK = "EE"
@@ -13,8 +12,11 @@ object Constants {
     const val LANGUAGE_KEY = "PREFS_LANGUAGE_KEY"
     const val DEFAULT_STRING = ""
     const val DEFAULT_CELSIUS = "°C"
+    const val DEFAULT_DEGREE = "°"
     const val DEFAULT_KILOMETER = "Km/h"
     const val DEFAULT_PERCENT = "%"
-    const val EXTRA_LATITUDE = "com.li.weatherapp.utils.EXTRA_LATITUDE"
-    const val EXTRA_LONGITUDE = "com.li.weatherapp.utils.EXTRA_LONGITUDE"
+    const val DEFAULT_PRESSURE = "mbar"
+    const val EXTRA_LATITUDE="com.li.weatherapp.utils.EXTRA_LATITUDE"
+    const val EXTRA_LONGITUDE="com.li.weatherapp.utils.EXTRA_LONGITUDE"
+    const val SHORT_DATE_FORMAT = "dd/MM"
 }

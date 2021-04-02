@@ -12,6 +12,7 @@ import com.li.weatherapp.data.source.remote.AQIRemoteDataSource
 import com.li.weatherapp.data.source.remote.CurrentWeatherRemoteDataSource
 import com.li.weatherapp.ui.airquality.AirQualityFragment
 import com.li.weatherapp.ui.setting.SettingFragment
+import com.li.weatherapp.ui.weatherdetail.WeatherDetailFragment
 import com.li.weatherapp.utils.*
 import kotlinx.android.synthetic.main.fragment_current_weather.*
 import kotlinx.android.synthetic.main.layout_air_quality.*
@@ -25,6 +26,7 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
     private var presenter: CurrentWeatherForecastContact.Presenter? = null
     private var cityName = ""
     private var aqiDegree: AQI? = null
+    private var weather: CurrentWeather? = null
 
     override val layoutResource get() = R.layout.fragment_current_weather
 
@@ -60,21 +62,27 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
                 )
             }
         }
+        buttonSeeMore.setOnClickListener {
+            weather?.let {
+                fragmentManager?.replaceFragment(
+                    R.id.frameMain,
+                    WeatherDetailFragment.getInstance(it)
+                )
+            }
+        }
     }
 
     override fun showCurrentWeatherForecast(weather: CurrentWeather) {
+        this.weather = weather
         textCurrentTemper.text = weather.currentTemp.currentTemp.toInt().toString()
         textDescription.text = weather.currentWeather.description.capitalize()
         textTemperatureData.text = formatString(
             weather.currentTemp.min.toInt().toString(),
             weather.currentTemp.max.toInt().toString()
         )
-        textWind.text =
-            weather.wind.speed.toInt().toString() + Constants.DEFAULT_KILOMETER
-        textWindGusts.text =
-            weather.wind.degree.toInt().toString() + Constants.DEFAULT_KILOMETER
-        textWindDegree.text =
-            weather.currentTemp.humidity.toInt().toString() + Constants.DEFAULT_PERCENT
+        textWind.text = weather.wind.speed.toInt().withUnit(Constants.DEFAULT_KILOMETER)
+        textWindDegree.text = weather.wind.degree.toInt().withUnit(Constants.DEFAULT_DEGREE)
+        textHumidity.text = weather.currentTemp.humidity.toInt().withUnit(Constants.DEFAULT_PERCENT)
         textTitleCurrentWeather.text = weather.cityName
         this.cityName = weather.cityName
 
@@ -84,10 +92,11 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
         aqiDegree = airQuality
         textAqi.text = airQuality.aqi.toString()
         progressAirQuality.progress = airQuality.aqi
-        textMeasure.text =
-            context?.let { AirPollutionUtils.getAirPollutionTitle(it, airQuality.aqi) }
-        textAirDescription.text =
-            context?.let { AirPollutionUtils.getAirPollutionDescription(it, airQuality.aqi) }
+        context?.let {
+            textMeasure.text = AirPollutionUtils.getAirPollutionTitle(it, airQuality.aqi)
+            textAirDescription.text =
+                AirPollutionUtils.getAirPollutionDescription(it, airQuality.aqi)
+        }
     }
 
     override fun updateLocation(lat: String, lon: String) {

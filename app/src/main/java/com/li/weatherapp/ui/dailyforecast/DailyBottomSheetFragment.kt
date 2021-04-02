@@ -9,6 +9,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.li.weatherapp.R
 import com.li.weatherapp.data.model.Daily
 import com.li.weatherapp.utils.Constants
+import com.li.weatherapp.utils.convertToMilli
 import kotlinx.android.synthetic.main.bottom_sheet_detail.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -26,9 +27,9 @@ class DailyBottomSheetFragment : BottomSheetDialogFragment() {
         arguments?.getParcelable<Daily>(BUNDLE_DAILY)?.apply {
             val fullDateFormat = SimpleDateFormat(Constants.FULL_DATE_FORMAT, Locale.ENGLISH)
             val timeFormat = SimpleDateFormat(Constants.TIME_FORMAT, Locale.ENGLISH)
-            textDateBottomSheet.text = fullDateFormat.format(time * Constants.MILLI_TO_SECOND)
+            textDateBottomSheet.text = fullDateFormat.format(time.convertToMilli())
             textTemperatureBottomSheet.text = temp.day.toInt().toString()
-            textDescriptionBottomSheet.text = weather[0].main
+            textDescriptionBottomSheet.text = weather.first().main
             textRealFeelBottomSheet.text = feelsLike.day.toString()
             textWindBottomSheet.text = windSpeed.toString()
             textWindDegreeBottomSheet.text = windDeg.toString()
@@ -36,8 +37,8 @@ class DailyBottomSheetFragment : BottomSheetDialogFragment() {
             textPressureBottomSheet.text = pressure.toString()
             textCloudBottomSheet.text = clouds.toString()
             textUVBottomSheet.text = uvi.toString()
-            textSunriseBottomSheet.text = timeFormat.format(sunrise * Constants.MILLI_TO_SECOND)
-            textSunsetBottomSheet.text = timeFormat.format(sunset * Constants.MILLI_TO_SECOND)
+            textSunriseBottomSheet.text = timeFormat.format(sunrise.convertToMilli())
+            textSunsetBottomSheet.text = timeFormat.format(sunset.convertToMilli())
         }
     }
 

@@ -249,7 +249,7 @@
                 app:layout_constraintStart_toStartOf="@id/textRealFeelTitle"
                 app:layout_constraintTop_toBottomOf="@id/textVisibilityTitle"
                 app:layout_constraintWidth_percent="0.1"
-                app:tint="@android:color/white" />
+                app:tint="?attr/color_tint_image_view" />
 
             <TextView
                 android:id="@+id/textSunrise"
@@ -300,6 +300,7 @@
                 app:layout_constraintTop_toBottomOf="@id/textSunrise" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewHistory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_8"

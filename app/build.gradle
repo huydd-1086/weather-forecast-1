@@ -19,6 +19,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField "String", "OPENWEATHER_API_KEY", "\"${OPENWEATHER_API_KEY}\""
+        manifestPlaceholders = [mapAPIKey:MAP_API_KEY]
     }
 
     buildTypes {

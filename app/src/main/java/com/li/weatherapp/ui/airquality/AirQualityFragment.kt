@@ -4,7 +4,6 @@ import androidx.core.os.bundleOf
 import com.li.weatherapp.R
 import com.li.weatherapp.base.BaseFragment
 import com.li.weatherapp.data.model.AQI
-import com.li.weatherapp.ui.currentweather.CurrentWeatherFragment
 import com.li.weatherapp.utils.AirPollutionUtils
 import com.li.weatherapp.utils.removeFragment
 import kotlinx.android.synthetic.main.fragment_air_quality.*
@@ -23,9 +22,7 @@ class AirQualityFragment : BaseFragment() {
 
     override fun initActions() {
         buttonBackAirQuality.setOnClickListener {
-            fragmentManager?.removeFragment(
-                CurrentWeatherFragment()
-            )
+            fragmentManager?.removeFragment(this)
         }
     }
 

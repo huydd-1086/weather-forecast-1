@@ -11,9 +11,13 @@ fun FragmentManager.removeFragment(fragment: Fragment) {
         .commit()
 }
 
-fun FragmentManager.replaceFragment(layout: Int, fragment: Fragment) {
+fun FragmentManager.replaceFragment(
+    layout: Int,
+    fragment: Fragment,
+    tag: String = fragment.javaClass.name
+) {
     beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-        .replace(layout, fragment)
+        .replace(layout, fragment, tag)
         .addToBackStack(null)
         .commit()
 }

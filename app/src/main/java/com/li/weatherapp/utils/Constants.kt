@@ -21,4 +21,5 @@ object Constants {
     const val SHORT_DATE_FORMAT = "dd/MM"
     const val IS_FAVORITE_VALUE = 1
     const val NON_FAVORITE_VALUE = 0
+    const val MAP_ZOOM_COEFFICIENT = 10f
 }

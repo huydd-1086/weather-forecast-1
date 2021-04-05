@@ -14,12 +14,12 @@ import java.util.*
 
 class DailyForecastFragment : BaseFragment(), DailyForecastContract.View {
 
-    private var presenter: DailyForecastContract.Presenter? = null
+    override val layoutResource: Int = R.layout.fragment_daily_forecast
+
     private val adapter = DailyForecastAdapter(this::dailyForecastItemClick)
     private val maxList = mutableListOf<Int>()
     private val minList = mutableListOf<Int>()
-
-    override val layoutResource: Int = R.layout.fragment_daily_forecast
+    private var presenter: DailyForecastContract.Presenter? = null
 
     override fun setupViews() {
         setupAdapter()
@@ -41,7 +41,10 @@ class DailyForecastFragment : BaseFragment(), DailyForecastContract.View {
             getForecastByLocation()
         }
         buttonSettingDailyForecast.setOnClickListener {
-            fragmentManager?.replaceFragment(R.id.frameMain, SettingFragment())
+            fragmentManager?.replaceFragment(
+                R.id.frameMain,
+                SettingFragment()
+            )
         }
     }
 

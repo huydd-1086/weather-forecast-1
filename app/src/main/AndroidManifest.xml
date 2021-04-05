@@ -14,6 +14,9 @@
         android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/WeatherAppLight">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${mapAPIKey}"/>
         <activity
             android:name=".ui.splash.Splash"
             android:theme="@style/SplashTheme">

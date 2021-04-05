@@ -42,6 +42,7 @@
     <string name="title_allow">Allow</string>
     <string name="title_search">Search</string>
     <string name="title_hourly_forecast">Hourly Forecast</string>
+    <string name="title_map">Map</string>
     <string name="text_bad_air_quality_description">The air has reached a high level of pollution that is not suitable for sensitive groups. Please limit out</string>
     <string name="text_wonderful_air_range">0 - 19</string>
     <string name="text_wonderful_air_description">Air quality is ideal for most subjects. Enjoy normal outdoor activities</string>

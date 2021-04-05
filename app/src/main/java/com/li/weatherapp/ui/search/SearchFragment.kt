@@ -1,6 +1,5 @@
 package com.li.weatherapp.ui.search
 
-
 import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -16,12 +15,9 @@ import com.li.weatherapp.data.source.local.db.AppDatabase
 import com.li.weatherapp.data.source.remote.SearchedCityRemoteDataSource
 import com.li.weatherapp.ui.adapters.RecentCityAdapter
 import com.li.weatherapp.ui.adapters.SearchedCityAdapter
-import com.li.weatherapp.utils.Constants
-import com.li.weatherapp.utils.SharePreferenceHelper
-import com.li.weatherapp.utils.removeFragment
-import com.li.weatherapp.utils.showToast
+import com.li.weatherapp.ui.map.MapFragment
+import com.li.weatherapp.utils.*
 import kotlinx.android.synthetic.main.fragment_search.*
-
 
 class SearchFragment : BaseFragment(), SearchContact.View {
     private var presenter: SearchContact.Presenter? = null
@@ -70,7 +66,10 @@ class SearchFragment : BaseFragment(), SearchContact.View {
             }
         }
         buttonBack.setOnClickListener {
-            fragmentManager?.removeFragment(SearchFragment())
+            fragmentManager?.removeFragment(this)
+        }
+        buttonMap.setOnClickListener {
+            fragmentManager?.replaceFragment(R.id.frameMain, MapFragment())
         }
     }
 
@@ -130,7 +129,7 @@ class SearchFragment : BaseFragment(), SearchContact.View {
             setLongitude(item.longitude)
             setLatitude(item.latitude)
         }
-        fragmentManager?.removeFragment(SearchFragment())
+        fragmentManager?.removeFragment(this)
     }
 
     private fun recentCityItemClick(item: SearchedCity) {
@@ -138,7 +137,7 @@ class SearchFragment : BaseFragment(), SearchContact.View {
             setLongitude(item.longitude)
             setLatitude(item.latitude)
         }
-        fragmentManager?.removeFragment(SearchFragment())
+        fragmentManager?.removeFragment(this)
     }
 
     private fun imageFavoriteItemClick(item: SearchedCity) {

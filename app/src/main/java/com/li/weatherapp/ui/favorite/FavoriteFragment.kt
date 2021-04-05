@@ -17,11 +17,12 @@ import com.li.weatherapp.utils.showToast
 import kotlinx.android.synthetic.main.fragment_favorite.*
 
 class FavoriteFragment : BaseFragment(), FavoriteContact.View {
-    private var presenter: FavoriteContact.Presenter? = null
-    private val favoriteAdapter = FavoriteCitiesAdapter()
-    private val weatherCities = mutableListOf<CurrentWeather>()
 
     override val layoutResource get() = R.layout.fragment_favorite
+
+    private val favoriteAdapter = FavoriteCitiesAdapter()
+    private val weatherCities = mutableListOf<CurrentWeather>()
+    private var presenter: FavoriteContact.Presenter? = null
 
     override fun setupViews() {
         recyclerViewFavorite.adapter = favoriteAdapter

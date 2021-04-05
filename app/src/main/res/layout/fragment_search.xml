@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bg_bright">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/viewTitleLocationSearch"
@@ -22,6 +21,7 @@
         android:layout_marginStart="@dimen/dp_8"
         android:layout_marginEnd="@dimen/dp_10"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/text_image_description"
         android:tint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@id/viewTitleLocationSearch"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,6 +60,7 @@
         android:id="@+id/buttonSearch"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/text_image_description"
         android:scaleType="center"
         android:src="@drawable/ic_search"
         app:layout_constraintBottom_toBottomOf="@id/textSearch"
@@ -73,6 +74,7 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_margin="@dimen/dp_8"
         android:background="@drawable/bg_button_map"
+        android:contentDescription="@string/text_image_description"
         android:src="@drawable/ic_map"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/guidelineVertical85"
@@ -85,11 +87,11 @@
         android:layout_margin="@dimen/dp_8"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_searched_city"
-        tools:itemCount="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textSearch" />
+        app:layout_constraintTop_toBottomOf="@id/textSearch"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_searched_city" />
 
     <TextView
         android:id="@+id/textRecent"
@@ -111,11 +113,11 @@
         android:layout_margin="@dimen/dp_8"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_recent"
-        tools:itemCount="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textRecent" />
+        app:layout_constraintTop_toBottomOf="@id/textRecent"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_recent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineVertical85"

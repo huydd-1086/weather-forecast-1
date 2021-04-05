@@ -24,12 +24,13 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.View {
+
+    override val layoutResource get() = R.layout.fragment_current_weather
+
     private var presenter: CurrentWeatherForecastContact.Presenter? = null
     private var cityName = ""
     private var aqiDegree: AQI? = null
     private var weather: CurrentWeather? = null
-
-    override val layoutResource get() = R.layout.fragment_current_weather
 
     override fun setupViews() {
         showCurrentTime()
@@ -53,7 +54,10 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
 
     override fun initActions() {
         buttonSettingCurrentWeather.setOnClickListener {
-            fragmentManager?.replaceFragment(R.id.frameMain, SettingFragment())
+            fragmentManager?.replaceFragment(
+                R.id.frameMain,
+                SettingFragment()
+            )
         }
         buttonAirInformation.setOnClickListener {
             aqiDegree?.let {

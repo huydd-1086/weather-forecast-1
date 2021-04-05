@@ -55,7 +55,7 @@ class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
         lat = currentWeather.coordinate.lat.toString()
         lon = currentWeather.coordinate.lon.toString()
         textTemperature.text = currentWeather.currentTemp.currentTemp.toInt().toString()
-        textDescriptionTitle.text = currentWeather.currentWeather.description
+        textDescriptionTitle.text = currentWeather.currentWeather.description.capitalize()
         textRealFeel.text = currentWeather.currentTemp.realFeeling.toInt()
             .withUnit(Constants.DEFAULT_DEGREE)
         textWind.text =

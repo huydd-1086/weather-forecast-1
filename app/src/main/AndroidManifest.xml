@@ -29,6 +29,18 @@
         <service
             android:name=".service.NotificationService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name=".service.WidgetUpdateService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
         <receiver android:name=".receiver.NotificationReceiver" />
+        <receiver android:name="com.li.weatherapp.widget.WeatherWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_weather" />
+        </receiver>
     </application>
 </manifest>

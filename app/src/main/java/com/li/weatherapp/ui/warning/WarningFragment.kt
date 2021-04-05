@@ -1,5 +1,6 @@
 package com.li.weatherapp.ui.warning
 
+import android.content.Intent
 import com.li.weatherapp.R
 import com.li.weatherapp.base.BaseFragment
 import com.li.weatherapp.ui.main.MainActivity
@@ -17,7 +18,10 @@ class WarningFragment : BaseFragment() {
 
     override fun initActions() {
         buttonWarning.setOnClickListener {
-            startActivity(activity?.application?.let { MainActivity.getIntent(it) })
+            startActivity(activity?.application?.let {
+                MainActivity.getIntent(it)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            })
         }
     }
 }

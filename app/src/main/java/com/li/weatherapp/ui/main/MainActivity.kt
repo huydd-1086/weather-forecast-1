@@ -19,6 +19,7 @@ import com.li.weatherapp.data.source.local.CurrentCityLocalDataSource
 import com.li.weatherapp.ui.warning.WarningFragment
 import com.li.weatherapp.ui.currentweather.CurrentWeatherFragment
 import com.li.weatherapp.ui.dailyforecast.DailyForecastFragment
+import com.li.weatherapp.ui.favorite.FavoriteFragment
 import com.li.weatherapp.ui.hourly.HourlyForecastFragment
 import com.li.weatherapp.ui.news.NewsFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -30,7 +31,7 @@ class MainActivity : BaseActivity(), BaseView {
     private val currentWeatherFragment = CurrentWeatherFragment()
     private val hourlyForecastFragment = HourlyForecastFragment()
     private val dailyForecastFragment = DailyForecastFragment()
-    private val favoriteCitiesFragment = CurrentWeatherFragment()
+    private val favoriteCitiesFragment = FavoriteFragment()
     private val newsFragment = NewsFragment()
     private var locationProvider: FusedLocationProviderClient? = null
     private var presenter: CurrentCityContract.Presenter? = null
@@ -134,7 +135,6 @@ class MainActivity : BaseActivity(), BaseView {
 
         fun getIntent(context: Context): Intent =
             Intent(context, MainActivity::class.java)
-                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
 
         fun getIntentFromNotification(context: Context) =
             Intent(context, MainActivity::class.java).apply {

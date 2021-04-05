@@ -23,6 +23,8 @@
             android:id="@+id/textTitleLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_expand"
+            android:drawablePadding="@dimen/dp_4"
             android:text="@string/title_today"
             android:textSize="@dimen/sp_24"
             app:layout_constraintBottom_toBottomOf="@id/viewTitleCurrentWeather"

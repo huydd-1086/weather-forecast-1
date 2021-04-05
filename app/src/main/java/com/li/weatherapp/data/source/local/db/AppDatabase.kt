@@ -3,7 +3,7 @@ package com.li.weatherapp.data.source.local.db
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.li.weatherapp.data.model.City
+import com.li.weatherapp.data.model.SearchedCity
 
 class AppDatabase private constructor(
     context: Context,
@@ -21,21 +21,25 @@ class AppDatabase private constructor(
     }
 
     companion object {
-        private const val DATABASE_NAME = "weather"
-        private const val DATABASE_VERSION = 1
+        private const val DATABASE_NAME = "weather.db"
+        private const val DATABASE_VERSION = 2
         private const val CREATE_TABLE_CITY =
-            "CREATE TABLE ${City.CITY_TABLE_NAME} (" +
-                "${City.CITY_ID} INTEGER PRIMARY KEY, " +
-                "${City.CITY_NAME} TEXT, " +
-                "${City.CITY_LATITUDE} REAL, " +
-                "${City.CITY_LONGITUDE} REAL)"
+            "CREATE TABLE ${SearchedCity.CITY_TABLE_NAME} (" +
+                "${SearchedCity.CITY_NAME} TEXT, " +
+                "${SearchedCity.CITY_LATITUDE} TEXT, " +
+                "${SearchedCity.CITY_LONGITUDE} TEXT, " +
+                "${SearchedCity.CITY_IS_FAVORITE} NUMBER(1))"
         private const val DROP_TABLE_CITY =
-            "DROP TABLE IF EXIST " + City.CITY_TABLE_NAME
+            "DROP TABLE IF EXIST " + SearchedCity.CITY_TABLE_NAME
+
+        private val lock = Any()
         private var instance: AppDatabase? = null
 
         fun getInstance(context: Context) =
-            instance ?: AppDatabase(context, DATABASE_NAME, DATABASE_VERSION).also {
-                instance = it
+            instance ?: synchronized(lock) {
+                instance ?: AppDatabase(context, DATABASE_NAME, DATABASE_VERSION).also {
+                    instance = it
+                }
             }
     }
 }

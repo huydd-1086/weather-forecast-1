@@ -62,4 +62,13 @@ object APIQueries {
             .appendQueryParameter(APIConstants.OPENWEATHER_UNITS, APIConstants.OPENWEATHER_METRIC)
             .appendQueryParameter(APIConstants.OPENWEATHER_API_KEY, BuildConfig.OPENWEATHER_API_KEY)
             .toString()
+
+    fun queryCities(cityName: String) =
+        Uri.Builder().scheme(APIConstants.SCHEME_HTTP)
+            .authority(APIConstants.GEODB_AUTHORITY_API)
+            .appendPath(APIConstants.GEODB_CONTENT_V1)
+            .appendQueryParameter(APIConstants.GEODB_LIMIT, APIConstants.GEODB_LIMIT_VALUE)
+            .appendQueryParameter(APIConstants.GEODB_OFFSET, APIConstants.GEODB_OFFSET_VALUE)
+            .appendQueryParameter(APIConstants.GEODB_NAME_PREFIX, cityName)
+            .toString()
 }

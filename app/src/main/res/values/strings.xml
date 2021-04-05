@@ -82,4 +82,9 @@
     <string name="text_warning_location">Can not get location</string>
     <string name="text_notification_title">Today Weather</string>
     <string name="text_notification_temp_separate"> - </string>
+    <string name="text_fill_city_name"> Please Fill City Name </string>
+    <string name="text_cannot_find_city_name"> Can not Find City </string>
+    <string name="text_add_to_favorite"> Added To Favorite </string>
+    <string name="text_delete_favorite"> Deleted Favorite City </string>
+    <string name="text_delete_fail"> Delete Fail </string>
 </resources>

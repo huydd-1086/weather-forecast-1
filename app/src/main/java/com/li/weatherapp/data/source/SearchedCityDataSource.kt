@@ -13,6 +13,7 @@ interface SearchedCityDataSource {
         fun deleteFavoriteCity(city: SearchedCity, callback: OnDataLoadCallback<Boolean>)
         fun insertFavoriteCity(city: SearchedCity, callback: OnDataLoadCallback<Boolean>)
         fun getRecentCities(callback: OnDataLoadCallback<List<SearchedCity>>)
+        fun getFavoriteCities(callback: OnDataLoadCallback<List<SearchedCity>>)
     }
 
 }

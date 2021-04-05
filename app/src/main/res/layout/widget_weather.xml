@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutWidget"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_8"
+    android:weightSum="7">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textTemperatureWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_40" />
+
+        <TextView
+            android:id="@+id/textDescriptionWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textMinMaxTemperatureWidget"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:textSize="@dimen/sp_24" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textHumidityWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_4"
+            android:textSize="@dimen/sp_20"
+            app:drawableStartCompat="@drawable/ic_humidity" />
+
+        <TextView
+            android:id="@+id/textWindWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:drawablePadding="@dimen/dp_4"
+            android:textSize="@dimen/sp_20"
+            app:drawableStartCompat="@drawable/ic_wind" />
+    </LinearLayout>
+</LinearLayout>

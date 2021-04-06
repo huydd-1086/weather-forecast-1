@@ -17,7 +17,6 @@
         android:id="@+id/textTitleHourly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/andes"
         android:text="@string/title_hourly_forecast"
         android:textSize="@dimen/sp_24"
         app:layout_constraintBottom_toBottomOf="@id/viewTitleHourlyWeather"

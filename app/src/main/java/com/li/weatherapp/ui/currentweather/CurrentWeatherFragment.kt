@@ -1,5 +1,6 @@
 package com.li.weatherapp.ui.currentweather
 
+import android.view.View
 import com.li.weatherapp.R
 import com.li.weatherapp.base.BaseFragment
 import com.li.weatherapp.data.model.AQI
@@ -16,10 +17,14 @@ import com.li.weatherapp.ui.setting.SettingFragment
 import com.li.weatherapp.ui.weatherdetail.WeatherDetailFragment
 import com.li.weatherapp.utils.*
 import kotlinx.android.synthetic.main.fragment_current_weather.*
+import kotlinx.android.synthetic.main.fragment_weather_detail.*
 import kotlinx.android.synthetic.main.layout_air_quality.*
 import kotlinx.android.synthetic.main.layout_air_quality.progressAirQuality
 import kotlinx.android.synthetic.main.layout_temperature.*
 import kotlinx.android.synthetic.main.layout_weather_detail.*
+import kotlinx.android.synthetic.main.layout_weather_detail.textHumidity
+import kotlinx.android.synthetic.main.layout_weather_detail.textWind
+import kotlinx.android.synthetic.main.layout_weather_detail.textWindDegree
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -34,6 +39,7 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
 
     override fun setupViews() {
         showCurrentTime()
+        progressLoadingCurrent.visibility = View.VISIBLE
     }
 
     override fun setupData() {
@@ -84,6 +90,7 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
     }
 
     override fun showCurrentWeatherForecast(weather: CurrentWeather) {
+        progressLoadingCurrent.visibility = View.GONE
         this.weather = weather
         textCurrentTemper.text = weather.currentTemp.currentTemp.toInt().toString()
         textDescription.text = weather.currentWeather.description.capitalize()

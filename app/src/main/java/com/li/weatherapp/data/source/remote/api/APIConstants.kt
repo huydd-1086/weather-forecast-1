@@ -21,7 +21,7 @@ object APIConstants {
     const val OPENWEATHER_TIME = "dt"
 
     const val GEODB_LIMIT = "limit"
-    const val GEODB_LIMIT_VALUE = "10"
+    const val GEODB_LIMIT_VALUE = "8"
     const val GEODB_CONTENT_V1 = "/v1/geo/cities"
     const val GEODB_OFFSET = "offset"
     const val GEODB_OFFSET_VALUE = "0"

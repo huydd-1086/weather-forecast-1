@@ -16,16 +16,16 @@ import java.util.*
 
 class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
 
+    override val layoutResource get() = R.layout.fragment_weather_detail
     override var bottomNavigationViewVisibility = View.GONE
 
-    private var presenter: WeatherDetailContract.Presenter? = null
     private val adapter = HistoryAdapter()
+    private var presenter: WeatherDetailContract.Presenter? = null
     private var lat = ""
     private var lon = ""
 
-    override val layoutResource get() = R.layout.fragment_weather_detail
-
     override fun setupViews() {
+        buttonBack.isEnabled = false
         progressLoading.visibility = View.VISIBLE
         setupAdapter()
     }
@@ -48,6 +48,7 @@ class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
     override fun showHistory(historyList: List<History>) {
         adapter.updateData(historyList)
         progressLoading.visibility = View.GONE
+        buttonBack.isEnabled = true
     }
 
     override fun showMessage(data: Any) {
@@ -79,6 +80,7 @@ class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
             timeFormat.format(currentWeather.sun.sunrise.convertToMilli())
         textSunset.text =
             timeFormat.format(currentWeather.sun.sunset.convertToMilli())
+        imageDescription.setImageResource(AirPollutionUtils.getImageDescription(currentWeather.currentWeather.main))
     }
 
     private fun setupAdapter() {

@@ -43,7 +43,6 @@
         android:id="@+id/textDegreeFavorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/andes"
         android:paddingEnd="@dimen/dp_4"
         android:text="@string/text_degree"
         android:textSize="@dimen/sp_24"
@@ -99,10 +98,11 @@
         android:id="@+id/textHumidityFavorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingEnd="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
         android:textSize="@dimen/sp_24"
         app:layout_constraintBottom_toBottomOf="@id/imageHumidityFavorite"
-        app:layout_constraintEnd_toEndOf="@id/textWindSpeedFavorite"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/textWindSpeedFavorite"
         app:layout_constraintTop_toTopOf="@id/imageHumidityFavorite" />
 

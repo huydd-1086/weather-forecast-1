@@ -6,7 +6,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.*
 import androidx.core.app.ActivityCompat
-import androidx.fragment.app.FragmentManager
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -85,9 +84,13 @@ class MainActivity : BaseActivity(), BaseView {
         }
     }
 
+    fun setBottomNavigationVisibility(visibility: Int) {
+        bottomNavigationView.visibility = visibility
+    }
+
     private fun showFragment(fragment: BaseFragment) =
         supportFragmentManager.apply {
-            popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            popBackStack()
             beginTransaction()
                 .replace(R.id.frameMain, fragment)
                 .commit()

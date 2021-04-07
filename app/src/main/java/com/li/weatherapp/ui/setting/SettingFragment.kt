@@ -23,9 +23,10 @@ import java.util.*
 @Suppress("DEPRECATION")
 class SettingFragment : BaseFragment(), SettingContract.View {
 
-    private var presenter: SettingContract.Presenter? = null
-
     override val layoutResource get() = R.layout.fragment_setting
+    override var bottomNavigationViewVisibility = View.GONE
+
+    private var presenter: SettingContract.Presenter? = null
 
     override fun setupViews() {
         setupLanguageSpinner()

@@ -1,5 +1,6 @@
 package com.li.weatherapp.ui.airquality
 
+import android.view.View
 import androidx.core.os.bundleOf
 import com.li.weatherapp.R
 import com.li.weatherapp.base.BaseFragment
@@ -12,6 +13,7 @@ import kotlinx.android.synthetic.main.layout_air_quality_info.*
 class AirQualityFragment : BaseFragment() {
 
     override val layoutResource get() = R.layout.fragment_air_quality
+    override var bottomNavigationViewVisibility = View.GONE
 
     override fun setupViews() {
     }

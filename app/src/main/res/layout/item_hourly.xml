@@ -3,16 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="@dimen/dp_4"
+    android:layout_marginTop="@dimen/dp_8"
     android:background="@drawable/bg_item_news"
-    android:padding="@dimen/dp_10">
+    android:paddingVertical="@dimen/dp_16"
+    android:paddingHorizontal="@dimen/dp_8">
 
     <TextView
         android:id="@+id/textDayTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/andes"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,8 +20,6 @@
         android:id="@+id/textHourly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/andes"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintEnd_toStartOf="@id/imageWeather"
         app:layout_constraintStart_toEndOf="@id/textDayTime"
@@ -32,17 +29,18 @@
         android:id="@+id/imageWeather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/text_image_description"
         android:src="@drawable/ic_cloud"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/textTemperature"
         app:layout_constraintStart_toEndOf="@id/textHourly"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/color_tint_image_view" />
 
     <TextView
         android:id="@+id/textTemperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/andes"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintEnd_toStartOf="@id/imageMoisture"
         app:layout_constraintStart_toEndOf="@id/imageWeather"
@@ -53,16 +51,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dp_8"
+        android:contentDescription="@string/text_image_description"
         android:src="@drawable/ic_humidity"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/textHumidity"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/color_tint_image_view" />
 
     <TextView
         android:id="@+id/textHumidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/andes"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

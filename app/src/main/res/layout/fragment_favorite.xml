@@ -33,6 +33,7 @@
         android:layout_marginEnd="@dimen/dp_8"
         android:background="@android:color/transparent"
         android:contentDescription="@string/text_image_description"
+        android:tint="?attr/color_tint_image_view"
         app:layout_constraintBottom_toBottomOf="@id/viewTitleFavoriteWeather"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

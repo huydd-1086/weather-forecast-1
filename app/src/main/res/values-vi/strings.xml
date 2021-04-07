@@ -43,6 +43,7 @@
     <string name="title_allow">Cho phép</string>
     <string name="title_hourly_forecast">Dự Báo Theo Giờ</string>
     <string name="title_map">Bản đồ</string>
+    <string name="text_unknown_place">Không xác định</string>
     <string name="text_bad_air_quality_description">Không khí đã đạt đến mức ô nhiễm cao không phù hợp với những nhóm người nhạy cảm. Hãy hạn chế ra ngoài</string>
     <string name="text_wonderful_air_range">0 - 19</string>
     <string name="text_wonderful_air_description">Chất lượng không khí lý tưởng cho hầu hết các đối tượng. Tận hưởng các hoạt động ngoài trời</string>

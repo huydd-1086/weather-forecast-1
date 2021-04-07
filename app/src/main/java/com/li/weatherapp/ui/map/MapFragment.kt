@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.fragment_map.*
 class MapFragment : BaseFragment() {
 
     override val layoutResource get() = R.layout.fragment_map
+    override var bottomNavigationViewVisibility = View.GONE
 
     private var lon = ""
     private var lat = ""

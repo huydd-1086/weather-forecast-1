@@ -20,14 +20,16 @@ import com.li.weatherapp.utils.*
 import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment : BaseFragment(), SearchContact.View {
-    private var presenter: SearchContact.Presenter? = null
+
+    override val layoutResource get() = R.layout.fragment_search
+    override var bottomNavigationViewVisibility = View.GONE
+
     private val recentCityAdapter = RecentCityAdapter(
         this::recentCityItemClick,
         this::imageFavoriteItemClick
     )
     private val searchedCityAdapter = SearchedCityAdapter(this::searchedCityItemClick)
-
-    override val layoutResource get() = R.layout.fragment_search
+    private var presenter: SearchContact.Presenter? = null
 
     override fun setupViews() {
         setupAdapter()

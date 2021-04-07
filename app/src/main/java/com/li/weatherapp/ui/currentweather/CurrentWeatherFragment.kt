@@ -94,9 +94,12 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
         textWind.text = weather.wind.speed.toInt().withUnit(Constants.DEFAULT_KILOMETER)
         textWindDegree.text = weather.wind.degree.toInt().withUnit(Constants.DEFAULT_DEGREE)
         textHumidity.text = weather.currentTemp.humidity.toInt().withUnit(Constants.DEFAULT_PERCENT)
-        textTitleLocation.text = weather.cityName
-        this.cityName = weather.cityName
-
+        if (weather.cityName == "") {
+            this.cityName = context?.resources?.getString(R.string.text_unknown_place).toString()
+        } else {
+            this.cityName = weather.cityName
+        }
+        textTitleLocation.text = this.cityName
     }
 
     override fun showAQIForecast(airQuality: AQI) {

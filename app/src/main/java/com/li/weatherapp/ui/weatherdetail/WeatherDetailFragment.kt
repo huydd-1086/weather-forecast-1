@@ -1,5 +1,6 @@
 package com.li.weatherapp.ui.weatherdetail
 
+import android.view.View
 import androidx.core.os.bundleOf
 import com.li.weatherapp.R
 import com.li.weatherapp.base.BaseFragment
@@ -15,6 +16,8 @@ import java.util.*
 
 class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
 
+    override var bottomNavigationViewVisibility = View.GONE
+
     private var presenter: WeatherDetailContract.Presenter? = null
     private val adapter = HistoryAdapter()
     private var lat = ""
@@ -23,6 +26,7 @@ class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
     override val layoutResource get() = R.layout.fragment_weather_detail
 
     override fun setupViews() {
+        progressLoading.visibility = View.VISIBLE
         setupAdapter()
     }
 
@@ -43,6 +47,7 @@ class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
 
     override fun showHistory(historyList: List<History>) {
         adapter.updateData(historyList)
+        progressLoading.visibility = View.GONE
     }
 
     override fun showMessage(data: Any) {

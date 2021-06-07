@@ -1,5 +1,6 @@
 package com.li.weatherapp.ui.weatherdetail
 
+import android.view.View
 import androidx.core.os.bundleOf
 import com.li.weatherapp.R
 import com.li.weatherapp.base.BaseFragment
@@ -15,14 +16,17 @@ import java.util.*
 
 class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
 
-    private var presenter: WeatherDetailContract.Presenter? = null
+    override val layoutResource get() = R.layout.fragment_weather_detail
+    override var bottomNavigationViewVisibility = View.GONE
+
     private val adapter = HistoryAdapter()
+    private var presenter: WeatherDetailContract.Presenter? = null
     private var lat = ""
     private var lon = ""
 
-    override val layoutResource get() = R.layout.fragment_weather_detail
-
     override fun setupViews() {
+        buttonBack.isEnabled = false
+        progressLoading.visibility = View.VISIBLE
         setupAdapter()
     }
 
@@ -43,6 +47,8 @@ class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
 
     override fun showHistory(historyList: List<History>) {
         adapter.updateData(historyList)
+        progressLoading.visibility = View.GONE
+        buttonBack.isEnabled = true
     }
 
     override fun showMessage(data: Any) {
@@ -55,7 +61,7 @@ class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
         lat = currentWeather.coordinate.lat.toString()
         lon = currentWeather.coordinate.lon.toString()
         textTemperature.text = currentWeather.currentTemp.currentTemp.toInt().toString()
-        textDescriptionTitle.text = currentWeather.currentWeather.description
+        textDescriptionTitle.text = currentWeather.currentWeather.description.capitalize()
         textRealFeel.text = currentWeather.currentTemp.realFeeling.toInt()
             .withUnit(Constants.DEFAULT_DEGREE)
         textWind.text =
@@ -74,6 +80,7 @@ class WeatherDetailFragment : BaseFragment(), WeatherDetailContract.View {
             timeFormat.format(currentWeather.sun.sunrise.convertToMilli())
         textSunset.text =
             timeFormat.format(currentWeather.sun.sunset.convertToMilli())
+        imageDescription.setImageResource(AirPollutionUtils.getImageDescription(currentWeather.currentWeather.main))
     }
 
     private fun setupAdapter() {

@@ -1,10 +1,10 @@
 package com.li.weatherapp.ui.airquality
 
+import android.view.View
 import androidx.core.os.bundleOf
 import com.li.weatherapp.R
 import com.li.weatherapp.base.BaseFragment
 import com.li.weatherapp.data.model.AQI
-import com.li.weatherapp.ui.currentweather.CurrentWeatherFragment
 import com.li.weatherapp.utils.AirPollutionUtils
 import com.li.weatherapp.utils.removeFragment
 import kotlinx.android.synthetic.main.fragment_air_quality.*
@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.layout_air_quality_info.*
 class AirQualityFragment : BaseFragment() {
 
     override val layoutResource get() = R.layout.fragment_air_quality
+    override var bottomNavigationViewVisibility = View.GONE
 
     override fun setupViews() {
     }
@@ -23,9 +24,7 @@ class AirQualityFragment : BaseFragment() {
 
     override fun initActions() {
         buttonBackAirQuality.setOnClickListener {
-            fragmentManager?.removeFragment(
-                CurrentWeatherFragment()
-            )
+            fragmentManager?.removeFragment(this)
         }
     }
 

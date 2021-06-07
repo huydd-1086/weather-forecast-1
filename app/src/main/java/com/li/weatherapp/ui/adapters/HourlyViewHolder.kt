@@ -3,6 +3,7 @@ package com.li.weatherapp.ui.adapters
 import android.view.View
 import com.li.weatherapp.base.BaseViewHolder
 import com.li.weatherapp.data.model.Hourly
+import com.li.weatherapp.utils.AirPollutionUtils
 import kotlinx.android.synthetic.main.item_hourly.view.*
 import com.li.weatherapp.utils.Constants
 import com.li.weatherapp.utils.convertToMilli
@@ -30,6 +31,7 @@ class HourlyViewHolder(
             textHourly.text = timeFormat.format(item.time.convertToMilli())
             textTemperature.text = item.temp.toInt().toString()
             textHumidity.text = item.humidity.toString()
+            imageWeather.setImageResource(AirPollutionUtils.getImageDescription(item.weather.main))
         }
     }
 }

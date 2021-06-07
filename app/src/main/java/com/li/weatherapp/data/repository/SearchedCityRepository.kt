@@ -29,12 +29,16 @@ class SearchedCityRepository private constructor(
         local.getRecentCities(callback)
     }
 
+    override fun getFavoriteCities(callback: OnDataLoadCallback<List<SearchedCity>>) {
+        local.getFavoriteCities(callback)
+    }
+
     companion object {
         private var instance: SearchedCityRepository? = null
+
         fun getInstance(
             remote: SearchedCityDataSource.Remote,
             local: SearchedCityDataSource.Local
         ) = instance ?: SearchedCityRepository(remote, local).also { instance = it }
     }
-
 }

@@ -16,9 +16,18 @@ object Constants {
     const val DEFAULT_KILOMETER = "Km/h"
     const val DEFAULT_PERCENT = "%"
     const val DEFAULT_PRESSURE = "mbar"
-    const val EXTRA_LATITUDE="com.li.weatherapp.utils.EXTRA_LATITUDE"
-    const val EXTRA_LONGITUDE="com.li.weatherapp.utils.EXTRA_LONGITUDE"
+    const val EXTRA_LATITUDE = "com.li.weatherapp.utils.EXTRA_LATITUDE"
+    const val EXTRA_LONGITUDE = "com.li.weatherapp.utils.EXTRA_LONGITUDE"
     const val SHORT_DATE_FORMAT = "dd/MM"
     const val IS_FAVORITE_VALUE = 1
     const val NON_FAVORITE_VALUE = 0
+    const val MAP_ZOOM_COEFFICIENT = 10f
+    const val DEFAULT_LATITUDE = 21.0160611
+    const val DEFAULT_LONGITUDE = 105.7817224
+    const val RAIN_DESCRIPTION = "Rain"
+    const val THUNDERSTORM_DESCRIPTION = "Thunderstorm"
+    const val DRIZZLE_DESCRIPTION = "Drizzle"
+    const val SNOW_DESCRIPTION = "Snow"
+    const val CLEAR_DESCRIPTION = "Clear"
+    const val CLOUDS_DESCRIPTION = "Clouds"
 }

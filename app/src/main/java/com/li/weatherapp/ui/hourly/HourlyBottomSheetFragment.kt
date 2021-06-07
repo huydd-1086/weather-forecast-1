@@ -8,6 +8,7 @@ import androidx.core.os.bundleOf
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.li.weatherapp.R
 import com.li.weatherapp.data.model.Hourly
+import com.li.weatherapp.utils.AirPollutionUtils
 import com.li.weatherapp.utils.Constants
 import com.li.weatherapp.utils.convertToMilli
 import kotlinx.android.synthetic.main.bottom_sheet_detail.*
@@ -38,6 +39,7 @@ class HourlyBottomSheetFragment : BottomSheetDialogFragment() {
             textPressureBottomSheet.text = pressure.toString()
             textCloudBottomSheet.text = clouds.toString()
             textUVBottomSheet.text = uvi.toString()
+            imageDescriptionBottomSheet.setImageResource(AirPollutionUtils.getImageDescription(weather.main))
         }
     }
 

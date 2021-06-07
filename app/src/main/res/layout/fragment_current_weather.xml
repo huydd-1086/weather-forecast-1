@@ -19,11 +19,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <ProgressBar
+            android:id="@+id/progressLoadingCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_loading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/textTitleLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_today"
+            android:drawableEnd="@drawable/ic_expand"
+            android:drawablePadding="@dimen/dp_4"
+            android:drawableTint="?attr/color_tint_image_view"
             android:textSize="@dimen/sp_24"
             app:layout_constraintBottom_toBottomOf="@id/viewTitleCurrentWeather"
             app:layout_constraintLeft_toLeftOf="parent"

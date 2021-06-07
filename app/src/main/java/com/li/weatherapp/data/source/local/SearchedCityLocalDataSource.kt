@@ -34,6 +34,12 @@ class SearchedCityLocalDataSource private constructor(
         }.execute(Unit)
     }
 
+    override fun getFavoriteCities(callback: OnDataLoadCallback<List<SearchedCity>>) {
+        LocalAsyncTask<Unit, List<SearchedCity>>(callback) {
+            favoriteCityDAO.getFavoriteCities()
+        }.execute(Unit)
+    }
+
     companion object {
         private var instance: SearchedCityLocalDataSource? = null
         fun getInstance(favoriteDao: FavoriteCityDAO) =

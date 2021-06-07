@@ -16,10 +16,10 @@ import kotlinx.android.synthetic.main.fragment_hourly_forecast.*
 
 class HourlyForecastFragment : BaseFragment(), HourlyForeCastContract.View {
 
-    private var presenter: HourlyForeCastContract.Presenter? = null
-    private val adapter = HourlyForecastAdapter(this::hourlyForecastItemClick)
-
     override val layoutResource get() = R.layout.fragment_hourly_forecast
+
+    private val adapter = HourlyForecastAdapter(this::hourlyForecastItemClick)
+    private var presenter: HourlyForeCastContract.Presenter? = null
 
     override fun setupViews() {
         setupAdapter()
@@ -46,7 +46,10 @@ class HourlyForecastFragment : BaseFragment(), HourlyForeCastContract.View {
             presenter?.getCurrentLocation()
         }
         buttonSettingHourly.setOnClickListener {
-            fragmentManager?.replaceFragment(R.id.frameMain, SettingFragment())
+            fragmentManager?.replaceFragment(
+                R.id.frameMain,
+                SettingFragment()
+            )
         }
     }
 
